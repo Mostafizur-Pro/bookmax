@@ -1,5 +1,11 @@
-import React from "react";
+import BannerPage from "../../components/HomePage/BannerPage";
+import BookItem from "../../components/HomePage/BookItem";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <BannerPage />
+      <BookItem />
+    </div>
+  );
 }
