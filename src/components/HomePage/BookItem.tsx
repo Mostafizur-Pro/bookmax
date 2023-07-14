@@ -6,10 +6,9 @@ export default function BookItem() {
   useEffect(() => {
     void fetch("../../../public/books.json")
       .then((res) => res.json())
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       .then((data) => setData(data));
   }, []);
-  console.log(data);
+  // console.log(data);
   return (
     <div className="mt-10">
       <div className="text-center">

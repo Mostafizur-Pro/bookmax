@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
+import AllBooks from "../pages/AllBooks/AllBooks";
 
 const routes = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/allbooks",
+        element: <AllBooks />,
+      },
+      {
         path: "/login",
         element: <Login />,
       },
@@ -21,6 +26,14 @@ const routes = createBrowserRouter([
         path: "/signUp",
         element: <Signup />,
       },
+      // {
+      //   path: "/allbooks/:category",
+      //   element: <AllBooks />,
+      //   loader: ({ params }) =>
+      //     fetch(
+      //       `https://e-shoppers-bd-server-dmq5bw2u1-mostafizur-pro.vercel.app/products?category=${params.category}`
+      //     ),
+      // },
     ],
   },
 

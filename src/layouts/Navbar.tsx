@@ -40,11 +40,11 @@ export default function Navbar() {
         </details>
       </li> */}
       <li>
-        <Link to="/">𝒜𝓁𝓁 𝐵𝑜𝑜𝓀𝓈</Link>
+        <Link to="/allbooks">𝒜𝓁𝓁 𝐵𝑜𝑜𝓀𝓈</Link>
       </li>
 
       <li>
-        <Link to="/">𝒜𝒷𝑜𝓊𝓉</Link>
+        <Link to="/about">𝒜𝒷𝑜𝓊𝓉</Link>
       </li>
     </>
   );
