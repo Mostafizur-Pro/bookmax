@@ -61,11 +61,13 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{menuItem}</ul>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <a className="btn">𝐿𝑜𝑔𝑜𝓊𝓉</a>
-      </div>
+      </div> */}
       <div className="navbar-end">
-        <a className="btn">𝐿𝑜𝑔𝒾𝓃</a>
+        <Link to="/login" className="btn">
+          𝐿𝑜𝑔𝒾𝓃
+        </Link>
       </div>
     </div>
   );
