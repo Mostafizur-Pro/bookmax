@@ -39,24 +39,16 @@ export default function BookItem() {
                     <div className="badge badge-outline mr-3">{item.genre}</div>{" "}
                   </div>
                   <div className="card-body">
-                    <h2 className="card-title">
+                    <h2 id="font3" className="card-title">
                       {item.title}
-                      {/* <div className="badge badge-secondary">NEW</div> */}
                     </h2>
-                    <p className="">Year: {item.publication}</p>
-                    {/* <p className="">{item.genre}</p> */}
-                    <p className="text-gray-400 text-sm">By: {item.author}</p>
+                    <p id="font3" className="italic text-sm">
+                      Year: {item.publication}
+                    </p>
 
-                    {/* <div className="flex">
-                    <h3 className="text-xl font-semibold text-green-400">
-                      $25.18
-                    </h3>
-                    <h3 className="text-lg font-semibold ml-3 line-through text-gray-400">
-                      $27.20
-                    </h3>
-                  </div> */}
+                    <p className="text-gray-400 text-sm">By: {item.author}</p>
                   </div>
-                  <div className="text-center mb-3">
+                  <div className="text-center ">
                     <button className="btn text-sm rounded-none  btn-outline">
                       {" "}
                       See Details

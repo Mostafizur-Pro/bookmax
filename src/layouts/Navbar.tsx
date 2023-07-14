@@ -56,7 +56,9 @@ export default function Navbar() {
             {menuItem}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">𝘽𝙊𝙊𝙆𝙈𝘼𝙓</a>
+        <Link to="/" className=" normal-case text-xl ml-10">
+          𝘽𝙊𝙊𝙆<span className="text-red-200 ">𝙈𝘼𝙓</span>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{menuItem}</ul>
