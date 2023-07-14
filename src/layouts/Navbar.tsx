@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../redux/hook";
+import { signOut } from "firebase/auth";
+import { setUser } from "../redux/feature/user/userSlice";
+import { auth } from "../lib/firebase";
 
 export default function Navbar() {
+  const { user } = useAppSelector((state) => state.user);
+  console.log("user", user);
+  const dispatch = useAppDispatch();
+
+  const handleLogout = () => {
+    // console.log();
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        dispatch(setUser(null));
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   const menuItem = (
     <>
       <li>
@@ -63,14 +83,30 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{menuItem}</ul>
       </div>
+      {user.email && (
+        <>
+          <div className="navbar-end">
+            <a onClick={handleLogout} className="btn">
+              𝐿𝑜𝑔𝑜𝓊𝓉
+            </a>
+          </div>
+        </>
+      )}
+      {!user.email && (
+        <>
+          <div className="navbar-end">
+            <Link to="/login" className="btn">
+              𝐿𝑜𝑔𝒾𝓃
+            </Link>
+          </div>
+        </>
+      )}
+
       {/* <div className="navbar-end">
-        <a className="btn">𝐿𝑜𝑔𝑜𝓊𝓉</a>
-      </div> */}
-      <div className="navbar-end">
         <Link to="/login" className="btn">
           𝐿𝑜𝑔𝒾𝓃
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

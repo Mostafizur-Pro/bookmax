@@ -1,20 +1,31 @@
+import * as React from "react";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../redux/hook";
+import { loginUser } from "../../redux/feature/user/userSlice";
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const { user, isLoading } = useAppSelector((state) => state.user);
+
   const handleSubmit = (event: React.SyntheticEvent) => {
     // setLoading(true);
     event.preventDefault();
 
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    console.log(email, password);
-
-    // signIn(email, password)
-    //   .then((res) => {
-    //     toast.success("Login Successfully!");
-    //     verifyJWT(res.user.email);
-    //   })
-    //   .catch((error) => console.error(error));
+    dispatch(
+      loginUser({
+        email: event.target.email.value,
+        password: event.target.password.value,
+      })
+    );
   };
+
+  React.useEffect(() => {
+    if (user.email && !isLoading) {
+      navigate("/");
+    }
+  }, [user.email, isLoading]);
   return (
     <div>
       <div>
