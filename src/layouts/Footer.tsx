@@ -1,4 +1,4 @@
-import Subscribe from "../components/HomePage/Subscribe/Subscribe";
+import Subscribe from "../components/Subscribe/Subscribe";
 import { Link } from "react-router-dom";
 
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
