@@ -1,24 +1,34 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { useAppDispatch } from "../../redux/hook";
+import { createUser } from "../../redux/feature/user/userSlice";
 
 export default function Signup() {
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
+  const dispatch = useAppDispatch();
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
     // setError("");
     // setLoading(true);
-    const name = event.target.name.value;
-    const image = event.target.image.files[0];
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const conPassword = event.target.conPassword.value;
+    // const name = event.target.name.value;
+    // const image = event.target.image.files[0];
+    // const email = event.target.email.value;
+    // const password = event.target.password.value;
+    // const conPassword = event.target.conPassword.value;
     // const radio = event.target.ColorOption.value;
-    console.log(name, image, email, password, conPassword);
 
-    if (password !== conPassword) {
-      setError("Password does not match!");
-      return;
-    }
+    // if (password !== conPassword) {
+    //   setError("Password does not match!");
+    //   return;
+    // }
+    dispatch(
+      createUser({
+        email: event.target.email.value,
+        password: event.target.password.value,
+      })
+    );
+    // console.log(name, image, email, password, conPassword);
+    console.log(event.target.email.value, event.target.password.value);
   };
   return (
     <div>
@@ -64,7 +74,7 @@ export default function Signup() {
                     data-temp-mail-org="0"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <label htmlFor="image" className="block mb-2 text-sm">
                     Select Profile Image:
                   </label>
@@ -75,7 +85,7 @@ export default function Signup() {
                     accept="image/*"
                     required
                   />
-                </div>
+                </div> */}
                 <div>
                   <div className="flex justify-between mb-2">
                     <label htmlFor="password" className="text-sm">
@@ -91,7 +101,7 @@ export default function Signup() {
                     className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:outline-green-500 text-gray-900"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <div className="flex justify-between mb-2">
                     <label htmlFor="conPassword" className="text-sm">
                       Confirm Password
@@ -105,51 +115,14 @@ export default function Signup() {
                     placeholder="*******"
                     className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:outline-green-500 text-gray-900"
                   />
-                </div>
-
-                <fieldset className="flex flex-wrap gap-3">
-                  <legend className="sr-only">Color</legend>
-
-                  {/* <div>
-                    <input
-                      type="radio"
-                      name="ColorOption"
-                      value="Other"
-                      id="ColorRed"
-                      className="peer hidden"
-                    />
-
-                    <label
-                      //   for="ColorRed"
-                      className="flex cursor-pointer items-center justify-center rounded-md border border-gray-100 py-2 px-3 text-gray-900 hover:border-gray-200 peer-checked:border-blue-500 peer-checked:bg-blue-500 peer-checked:text-white"
-                    >
-                      <p className="text-sm font-medium">User</p>
-                    </label>
-                  </div> */}
-                  {/* <div>
-                    <input
-                      type="radio"
-                      name="ColorOption"
-                      value="Seller"
-                      id="ColorBlack"
-                      className="peer hidden"
-                    />
-
-                    <label
-                      //   for="ColorBlack"
-                      className="flex cursor-pointer items-center justify-center rounded-md border border-gray-100 py-2 px-3 text-gray-900 hover:border-gray-200 peer-checked:border-blue-500 peer-checked:bg-blue-500 peer-checked:text-white"
-                    >
-                      <p className="text-sm font-medium">Seller</p>
-                    </label>
-                  </div> */}
-                </fieldset>
+                </div> */}
 
                 <div>
                   <button className="w-full px-8 py-3 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover:text-white text-gray-100">
                     {/* {loading ? <BtnSpinner /> : "Sign Up"} */}
                     Sign Up
                   </button>
-                  <p className="text-red-400">{error}</p>
+                  {/* <p className="text-red-400">{error}</p> */}
                 </div>
               </div>
             </form>
