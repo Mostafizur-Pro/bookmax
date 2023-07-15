@@ -1,6 +1,20 @@
 import { useForm } from "react-hook-form";
 import { IBooks } from "../../types/globalTypes";
+import { useAppSelector } from "../../redux/hook";
+import { usePostBookMutation } from "../../redux/feature/book/bookApi";
+import { useDispatch } from "react-redux";
+import { postApi } from "../../redux/feature/book/bookSlice";
+
+const imageHostKey = "eaab174463595ddbf478d87978c913ae";
+
 export default function AddNewBook() {
+  const { user } = useAppSelector((state) => state.user);
+  const dispatch = useDispatch();
+  //   console.log("user", user);
+
+  const [postBook] = usePostBookMutation();
+  //   console.log("Post", isLoading, isError, isSuccess, postBook);
+
   const {
     register,
     handleSubmit: handleBook,
@@ -8,11 +22,42 @@ export default function AddNewBook() {
   } = useForm();
   const handleAddNewBook = (data: IBooks) => {
     console.log("data", data);
-    // createImage(data);
+    createImage(data);
   };
+
+  const createImage = (data) => {
+    const image = data.image_link[0];
+    const formData = new FormData();
+    formData.append("image", image);
+    const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`;
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((imgData) => {
+        if (imgData.success) {
+          const userInfo = {
+            book: {
+              ...data,
+              author: data.author,
+              genre: data.genre,
+              publication: data.publication,
+              image_link: imgData.data.url,
+              title: data.title,
+              email: user.email,
+            },
+          };
+
+          console.log("object", userInfo);
+          //   postBook(userInfo);
+          dispatch(postApi(userInfo.book));
+        }
+      });
+  };
+
   return (
     <div>
-      {" "}
       <div className="max-w-lg">
         <h3 className="text-2xl text-center font-bold mt-10">Add Your Book</h3>
         <form
