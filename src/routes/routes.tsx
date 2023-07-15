@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import AllBooks from "../pages/AllBooks/AllBooks";
+import DashBoard from "../layouts/DashBoard";
+import AddNewBook from "../pages/AddNewBook/AddNewBook";
 
 const routes = createBrowserRouter([
   {
@@ -41,6 +43,16 @@ const routes = createBrowserRouter([
   //     path: "*",
   //     element: <NotFound />,
   //   },
+  {
+    path: "/dashboard",
+    element: <DashBoard />,
+    children: [
+      {
+        path: "/dashboard/add-new-book",
+        element: <AddNewBook />,
+      },
+    ],
+  },
 ]);
 
 export default routes;

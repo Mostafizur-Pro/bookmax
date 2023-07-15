@@ -1,6 +1,5 @@
 import Subscribe from "../components/Subscribe/Subscribe";
 import { Link } from "react-router-dom";
-
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
@@ -10,7 +9,7 @@ export default function Footer() {
   return (
     <>
       <Subscribe />
-      <div className="bg-[#F2F3F5] pt-12 px-10 ">
+      <div className="bg-[#F2F3F5] px-10 ">
         <div className="flex flex-col lg:flex-row justify-between container mx-auto font-Libre mb-16 py-10 px-3 lg:px-0">
           <aside className="">
             <h1 className="text-3xl capitalize text-black font-semibold mb-5">

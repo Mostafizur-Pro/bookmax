@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { IBooks } from "../../types/globalTypes";
+import { Link } from "react-router-dom";
 
 export default function BookItem() {
   const [data, setData] = useState<IBooks[]>([]);
@@ -58,6 +59,14 @@ export default function BookItem() {
             </section>
           </>
         ))}
+      </div>
+      <div className="text-center mt-10 ">
+        <Link to="/">
+          <button className="btn text-sm rounded-none  btn-outline">
+            {" "}
+            See All Book
+          </button>
+        </Link>
       </div>
     </div>
   );

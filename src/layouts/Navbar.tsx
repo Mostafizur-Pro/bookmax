@@ -23,7 +23,7 @@ export default function Navbar() {
 
   const menuItem = (
     <>
-      <li>
+      <li className="font-bold">
         <Link to="/">𝐻𝑜𝓂𝑒</Link>
       </li>
       {/* <li tabIndex={0}>
@@ -39,12 +39,18 @@ export default function Navbar() {
           </ul>
         </details>
       </li> */}
-      <li>
+      <li className="font-bold">
         <Link to="/allbooks">𝒜𝓁𝓁 𝐵𝑜𝑜𝓀𝓈</Link>
       </li>
 
-      <li>
+      <li className="font-bold">
         <Link to="/about">𝒜𝒷𝑜𝓊𝓉</Link>
+      </li>
+      <li className="font-medium">
+        <Link to="/dashboard/add-new-book">𝓓𝓪𝓼𝓱𝓫𝓸𝓪𝓻𝓭</Link>
+      </li>
+      <li className="font-medium">
+        <Link to="/dashboard">𝓓𝓪𝓼𝓱𝓫𝓸𝓪𝓻𝓭</Link>
       </li>
     </>
   );
