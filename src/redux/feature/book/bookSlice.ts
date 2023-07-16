@@ -31,7 +31,7 @@ export const postApi = createAsyncThunk(
   async (bookData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/books/createbook",
+        "http://localhost:5000/api/v1/books/create-book",
         bookData
       );
       return response.data;

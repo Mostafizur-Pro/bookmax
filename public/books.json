@@ -1,703 +1,803 @@
 [
   {
-    "author": "Chinua Achebe",
-    "image_link": "https://m.media-amazon.com/images/I/81vlAVbRl3L._AC_UF1000,1000_QL80_.jpg",
+    "_id": "01",
     "title": "Things Fall Apart",
-    "genre": "Fiction",
-    "publication": "2009"
+    "publication": "2009",
+    "genre": "Novel",
+    "author": "Chinua Achebe",
+    "image_link": "https://m.media-amazon.com/images/I/81vlAVbRl3L._AC_UF1000,1000_QL80_.jpg"
   },
   {
-    "author": "Hans Christian Andersen",
-    "image_link": "https://m.media-amazon.com/images/I/41B2B7Mpt0L.jpg",
+    "_id": "02",
     "title": "Fairy tales",
-    "genre": "Fiction",
-    "publication": "1836"
+    "publication": "1836",
+    "genre": "Magical Story",
+    "author": "Hans Christian Andersen",
+    "image_link": "https://m.media-amazon.com/images/I/41B2B7Mpt0L.jpg"
   },
   {
-    "author": "Dante Alighieri",
-    "image_link": "https://m.media-amazon.com/images/I/41JH19AK4aL._AC_UY218_.jpg",
+    "_id": "03",
     "title": "The Divine Comedy",
-    "genre": "Mostafizur",
-    "publication": "1315"
+    "publication": "1315",
+    "genre": "Poetry",
+    "author": "Dante Alighieri",
+    "image_link": "https://m.media-amazon.com/images/I/41JH19AK4aL._AC_UY218_.jpg"
   },
   {
-    "author": "N K Sandars",
-    "image_link": "https://m.media-amazon.com/images/I/51Zmgh6EIOL._SX331_BO1,204,203,200_.jpg",
+    "_id": "04",
     "title": "The Epic Of Gilgamesh",
-    "genre": "Mostafizur",
-    "publication": "1315"
+    "publication": "1315",
+    "genre": "Poetry",
+    "author": "N K Sandars",
+    "image_link": "https://m.media-amazon.com/images/I/51Zmgh6EIOL._SX331_BO1,204,203,200_.jpg"
   },
   {
-    "author": "Stephen",
-    "image_link": "https://m.media-amazon.com/images/I/51BNAD8p6pL._AC_UY218_.jpg",
+    "_id": "05",
     "title": "The Book Of Job",
-    "genre": "Mostafizur",
-    "publication": "-600"
+    "publication": "-600",
+    "genre": "Religious ",
+    "author": "Stephen",
+    "image_link": "https://m.media-amazon.com/images/I/51BNAD8p6pL._AC_UY218_.jpg"
   },
   {
-    "author": "William Harvey",
-    "image_link": "https://m.media-amazon.com/images/I/71o3r2yxoeL._AC_UY218_.jpg",
+    "_id": "06",
     "title": "One Thousand and One Nights",
-    "genre": "Mostafizur",
-    "publication": "1200"
+    "publication": "1200",
+    "genre": "Fiction",
+    "author": "William Harvey",
+    "image_link": "https://m.media-amazon.com/images/I/71o3r2yxoeL._AC_UY218_.jpg"
   },
 
   {
-    "author": "Jane Austen",
-    "image_link": "https://m.media-amazon.com/images/I/8164ehxyFAL._AC_UY218_.jpg",
+    "_id": "07",
     "title": "Pride and Prejudice",
+    "publication": "1813",
     "genre": "Mostafizur",
-    "publication": "1813"
+    "author": "Jane Austen",
+    "image_link": "https://m.media-amazon.com/images/I/8164ehxyFAL._AC_UY218_.jpg"
   },
   {
-    "author": "Honore",
-    "image_link": "https://m.media-amazon.com/images/I/A1-KEUOkBbL._AC_UY218_.jpg",
+    "_id": "08",
     "title": "Introduction by Donald Adamson",
+    "publication": "1835",
     "genre": "Mostafizur",
-    "publication": "1835"
-  },
-  {
     "author": "Honore",
-    "image_link": "https://m.media-amazon.com/images/I/713xPmXlMoL._AC_UY218_.jpg",
+    "image_link": "https://m.media-amazon.com/images/I/A1-KEUOkBbL._AC_UY218_.jpg"
+  },
+  {
+    "_id": "09",
     "title": "Pere Goriot",
+    "publication": "1835",
     "genre": "Mostafizur",
-    "publication": "1835"
+    "author": "Honore",
+    "image_link": "https://m.media-amazon.com/images/I/713xPmXlMoL._AC_UY218_.jpg"
   },
   {
-    "author": "Samuel Beckett",
-    "image_link": "https://m.media-amazon.com/images/I/A1M8hz+ogCL._AC_UY218_.jpg",
+    "_id": "10",
     "title": "Molloy, Malone Dies",
+    "publication": "1952",
     "genre": "Mostafizur",
-    "publication": "1952"
+    "author": "Samuel Beckett",
+    "image_link": "https://m.media-amazon.com/images/I/A1M8hz+ogCL._AC_UY218_.jpg"
   },
   {
-    "author": "Giovanni Boccaccio",
-    "image_link": "images/the-decameron.jpg",
+    "_id": "01",
     "title": "The Decameron",
+    "publication": "1351",
     "genre": "Mostafizur",
-    "publication": "1351"
+    "author": "Giovanni Boccaccio",
+    "image_link": "images/the-decameron.jpg"
   },
   {
-    "author": "Jorge Luis Borges",
-    "image_link": "images/ficciones.jpg",
+    "_id": "01",
     "title": "Ficciones",
+    "publication": "1965",
     "genre": "Mostafizur",
-    "publication": "1965"
+    "author": "Jorge Luis Borges",
+    "image_link": "images/ficciones.jpg"
   },
   {
-    "author": "Emily Bront\u00eb",
-    "image_link": "images/wuthering-heights.jpg",
+    "_id": "01",
     "title": "Wuthering Heights",
+    "publication": "1847",
     "genre": "Mostafizur",
-    "publication": "1847"
+    "author": "Emily Bront\u00eb",
+    "image_link": "images/wuthering-heights.jpg"
   },
   {
-    "author": "Albert Camus",
-    "image_link": "images/l-etranger.jpg",
+    "_id": "01",
     "title": "The Stranger",
+    "publication": "1942",
     "genre": "Mostafizur",
-    "publication": "1942"
+    "author": "Albert Camus",
+    "image_link": "images/l-etranger.jpg"
   },
   {
+    "_id": "01",
+    "title": "Poems",
+    "publication": "1952",
+    "genre": "Mostafizur",
     "author": "Paul Celan",
-    "image_link": "images/poems-paul-celan.jpg",
-    "title": "Poems",
-    "genre": "Mostafizur",
-    "publication": "1952"
+    "image_link": "images/poems-paul-celan.jpg"
   },
   {
-    "author": "Louis-Ferdinand C\u00e9line",
-    "image_link": "images/voyage-au-bout-de-la-nuit.jpg",
+    "_id": "01",
     "title": "Journey to the End of the Night",
+    "publication": "1932",
     "genre": "Mostafizur",
-    "publication": "1932"
+    "author": "Louis-Ferdinand C\u00e9line",
+    "image_link": "images/voyage-au-bout-de-la-nuit.jpg"
   },
   {
-    "author": "Miguel de Cervantes",
-    "image_link": "images/don-quijote-de-la-mancha.jpg",
+    "_id": "01",
     "title": "Don Quijote De La Mancha",
+    "publication": "1610",
     "genre": "Mostafizur",
-    "publication": "1610"
+    "author": "Miguel de Cervantes",
+    "image_link": "images/don-quijote-de-la-mancha.jpg"
   },
   {
-    "author": "Geoffrey Chaucer",
-    "image_link": "images/the-canterbury-tales.jpg",
+    "_id": "01",
     "title": "The Canterbury Tales",
+    "publication": "1450",
     "genre": "Mostafizur",
-    "publication": "1450"
+    "author": "Geoffrey Chaucer",
+    "image_link": "images/the-canterbury-tales.jpg"
   },
   {
+    "_id": "01",
+    "title": "Stories",
+    "publication": "1886",
+    "genre": "Mostafizur",
     "author": "Anton Chekhov",
-    "image_link": "images/stories-of-anton-chekhov.jpg",
-    "title": "Stories",
-    "genre": "Mostafizur",
-    "publication": "1886"
+    "image_link": "images/stories-of-anton-chekhov.jpg"
   },
   {
-    "author": "Joseph Conrad",
-    "image_link": "images/nostromo.jpg",
+    "_id": "01",
     "title": "Nostromo",
+    "publication": "1904",
     "genre": "Mostafizur",
-    "publication": "1904"
+    "author": "Joseph Conrad",
+    "image_link": "images/nostromo.jpg"
   },
   {
-    "author": "Charles Dickens",
-    "image_link": "images/great-expectations.jpg",
+    "_id": "01",
     "title": "Great Expectations",
+    "publication": "1861",
     "genre": "Mostafizur",
-    "publication": "1861"
+    "author": "Charles Dickens",
+    "image_link": "images/great-expectations.jpg"
   },
   {
-    "author": "Denis Diderot",
-    "image_link": "images/jacques-the-fatalist.jpg",
+    "_id": "01",
     "title": "Jacques the Fatalist",
+    "publication": "1796",
     "genre": "Mostafizur",
-    "publication": "1796"
+    "author": "Denis Diderot",
+    "image_link": "images/jacques-the-fatalist.jpg"
   },
   {
-    "author": "Alfred D\u00f6blin",
-    "image_link": "images/berlin-alexanderplatz.jpg",
+    "_id": "01",
     "title": "Berlin Alexanderplatz",
+    "publication": "1929",
     "genre": "Mostafizur",
-    "publication": "1929"
+    "author": "Alfred D\u00f6blin",
+    "image_link": "images/berlin-alexanderplatz.jpg"
   },
   {
-    "author": "Fyodor Dostoevsky",
-    "image_link": "images/crime-and-punishment.jpg",
+    "_id": "01",
     "title": "Crime and Punishment",
+    "publication": "1866",
     "genre": "Mostafizur",
-    "publication": "1866"
+    "author": "Fyodor Dostoevsky",
+    "image_link": "images/crime-and-punishment.jpg"
   },
   {
-    "author": "Fyodor Dostoevsky",
-    "image_link": "images/the-idiot.jpg",
+    "_id": "01",
     "title": "The Idiot",
+    "publication": "1869",
     "genre": "Mostafizur",
-    "publication": "1869"
+    "author": "Fyodor Dostoevsky",
+    "image_link": "images/the-idiot.jpg"
   },
   {
-    "author": "Fyodor Dostoevsky",
-    "image_link": "images/the-possessed.jpg",
+    "_id": "01",
     "title": "The Possessed",
+    "publication": "1872",
     "genre": "Mostafizur",
-    "publication": "1872"
-  },
-  {
     "author": "Fyodor Dostoevsky",
-    "image_link": "images/the-brothers-karamazov.jpg",
+    "image_link": "images/the-possessed.jpg"
+  },
+  {
+    "_id": "01",
     "title": "The Brothers Karamazov",
+    "publication": "1880",
     "genre": "Mostafizur",
-    "publication": "1880"
+    "author": "Fyodor Dostoevsky",
+    "image_link": "images/the-brothers-karamazov.jpg"
   },
   {
-    "author": "George Eliot",
-    "image_link": "images/middlemarch.jpg",
+    "_id": "01",
     "title": "Middlemarch",
+    "publication": "1871",
     "genre": "Mostafizur",
-    "publication": "1871"
+    "author": "George Eliot",
+    "image_link": "images/middlemarch.jpg"
   },
   {
-    "author": "Ralph Ellison",
-    "image_link": "images/invisible-man.jpg",
+    "_id": "01",
     "title": "Invisible Man",
+    "publication": "1952",
     "genre": "Mostafizur",
-    "publication": "1952"
+    "author": "Ralph Ellison",
+    "image_link": "images/invisible-man.jpg"
   },
   {
-    "author": "Euripides",
-    "image_link": "images/medea.jpg",
+    "_id": "01",
     "title": "Medea",
+    "publication": "-431",
     "genre": "Mostafizur",
-    "publication": "-431"
+    "author": "Euripides",
+    "image_link": "images/medea.jpg"
   },
   {
-    "author": "William Faulkner",
-    "image_link": "images/absalom-absalom.jpg",
+    "_id": "01",
     "title": "Absalom, Absalom!",
+    "publication": "1936",
     "genre": "Mostafizur",
-    "publication": "1936"
-  },
-  {
     "author": "William Faulkner",
-    "image_link": "images/the-sound-and-the-fury.jpg",
+    "image_link": "images/absalom-absalom.jpg"
+  },
+  {
+    "_id": "01",
     "title": "The Sound and the Fury",
+    "publication": "1929",
     "genre": "Mostafizur",
-    "publication": "1929"
+    "author": "William Faulkner",
+    "image_link": "images/the-sound-and-the-fury.jpg"
   },
   {
-    "author": "Gustave Flaubert",
-    "image_link": "images/madame-bovary.jpg",
+    "_id": "01",
     "title": "Madame Bovary",
+    "publication": "1857",
     "genre": "Mostafizur",
-    "publication": "1857"
-  },
-  {
     "author": "Gustave Flaubert",
-    "image_link": "images/l-education-sentimentale.jpg",
+    "image_link": "images/madame-bovary.jpg"
+  },
+  {
+    "_id": "01",
     "title": "Sentimental Education",
+    "publication": "1869",
     "genre": "Mostafizur",
-    "publication": "1869"
+    "author": "Gustave Flaubert",
+    "image_link": "images/l-education-sentimentale.jpg"
   },
   {
-    "author": "Federico Garc\u00eda Lorca",
-    "image_link": "images/gypsy-ballads.jpg",
+    "_id": "01",
     "title": "Gypsy Ballads",
+    "publication": "1928",
     "genre": "Mostafizur",
-    "publication": "1928"
+    "author": "Federico Garc\u00eda Lorca",
+    "image_link": "images/gypsy-ballads.jpg"
   },
   {
-    "author": "Gabriel Garc\u00eda M\u00e1rquez",
-    "image_link": "images/one-hundred-years-of-solitude.jpg",
+    "_id": "01",
     "title": "One Hundred Years of Solitude",
+    "publication": "1967",
     "genre": "Mostafizur",
-    "publication": "1967"
-  },
-  {
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
-    "image_link": "images/love-in-the-time-of-cholera.jpg",
+    "image_link": "images/one-hundred-years-of-solitude.jpg"
+  },
+  {
+    "_id": "01",
     "title": "Love in the Time of Cholera",
+    "publication": "1985",
     "genre": "Mostafizur",
-    "publication": "1985"
+    "author": "Gabriel Garc\u00eda M\u00e1rquez",
+    "image_link": "images/love-in-the-time-of-cholera.jpg"
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "image_link": "images/faust.jpg",
+    "_id": "01",
     "title": "Faust",
+    "publication": "1832",
     "genre": "Mostafizur",
-    "publication": "1832"
+    "author": "Johann Wolfgang von Goethe",
+    "image_link": "images/faust.jpg"
   },
   {
-    "author": "Nikolai Gogol",
-    "image_link": "images/dead-souls.jpg",
+    "_id": "01",
     "title": "Dead Souls",
+    "publication": "1842",
     "genre": "Mostafizur",
-    "publication": "1842"
+    "author": "Nikolai Gogol",
+    "image_link": "images/dead-souls.jpg"
   },
   {
-    "author": "G\u00fcnter Grass",
-    "image_link": "images/the-tin-drum.jpg",
+    "_id": "01",
     "title": "The Tin Drum",
+    "publication": "1959",
     "genre": "Mostafizur",
-    "publication": "1959"
+    "author": "G\u00fcnter Grass",
+    "image_link": "images/the-tin-drum.jpg"
   },
   {
-    "author": "Jo\u00e3o Guimar\u00e3es Rosa",
-    "image_link": "images/the-devil-to-pay-in-the-backlands.jpg",
+    "_id": "01",
     "title": "The Devil to Pay in the Backlands",
+    "publication": "1956",
     "genre": "Mostafizur",
-    "publication": "1956"
+    "author": "Jo\u00e3o Guimar\u00e3es Rosa",
+    "image_link": "images/the-devil-to-pay-in-the-backlands.jpg"
   },
   {
-    "author": "Knut Hamsun",
-    "image_link": "images/hunger.jpg",
+    "_id": "01",
     "title": "Hunger",
+    "publication": "1890",
     "genre": "Mostafizur",
-    "publication": "1890"
+    "author": "Knut Hamsun",
+    "image_link": "images/hunger.jpg"
   },
   {
-    "author": "Ernest Hemingway",
-    "image_link": "images/the-old-man-and-the-sea.jpg",
+    "_id": "01",
     "title": "The Old Man and the Sea",
+    "publication": "1952",
     "genre": "Mostafizur",
-    "publication": "1952"
+    "author": "Ernest Hemingway",
+    "image_link": "images/the-old-man-and-the-sea.jpg"
   },
   {
-    "author": "Homer",
-    "image_link": "images/the-iliad-of-homer.jpg",
+    "_id": "01",
     "title": "Iliad",
+    "publication": "-735",
     "genre": "Mostafizur",
-    "publication": "-735"
-  },
-  {
     "author": "Homer",
-    "image_link": "images/the-odyssey-of-homer.jpg",
+    "image_link": "images/the-iliad-of-homer.jpg"
+  },
+  {
+    "_id": "01",
     "title": "Odyssey",
+    "publication": "-800",
     "genre": "Mostafizur",
-    "publication": "-800"
+    "author": "Homer",
+    "image_link": "images/the-odyssey-of-homer.jpg"
   },
   {
-    "author": "Henrik Ibsen",
-    "image_link": "images/a-Dolls-house.jpg",
+    "_id": "01",
     "title": "A Doll's House",
+    "publication": "1879",
     "genre": "Mostafizur",
-    "publication": "1879"
+    "author": "Henrik Ibsen",
+    "image_link": "images/a-Dolls-house.jpg"
   },
   {
-    "author": "James Joyce",
-    "image_link": "images/ulysses.jpg",
+    "_id": "01",
     "title": "Ulysses",
+    "publication": "1922",
     "genre": "Mostafizur",
-    "publication": "1922"
+    "author": "James Joyce",
+    "image_link": "images/ulysses.jpg"
   },
   {
-    "author": "Franz Kafka",
-    "image_link": "images/stories-of-franz-kafka.jpg",
+    "_id": "01",
     "title": "Stories",
+    "publication": "1924",
     "genre": "Mostafizur",
-    "publication": "1924"
+    "author": "Franz Kafka",
+    "image_link": "images/stories-of-franz-kafka.jpg"
   },
   {
-    "author": "Franz Kafka",
-    "image_link": "images/the-trial.jpg",
+    "_id": "01",
     "title": "The Trial",
+    "publication": "1925",
     "genre": "Mostafizur",
-    "publication": "1925"
-  },
-  {
     "author": "Franz Kafka",
-    "image_link": "images/the-castle.jpg",
+    "image_link": "images/the-trial.jpg"
+  },
+  {
+    "_id": "01",
     "title": "The Castle",
+    "publication": "1926",
     "genre": "Mostafizur",
-    "publication": "1926"
+    "author": "Franz Kafka",
+    "image_link": "images/the-castle.jpg"
   },
   {
-    "author": "K\u0101lid\u0101sa",
-    "image_link": "images/the-recognition-of-shakuntala.jpg",
+    "_id": "01",
     "title": "The recognition of Shakuntala",
+    "publicationr": "1500",
     "genre": "Mostafizur",
-    "publicationr": "1500"
+    "author": "K\u0101lid\u0101sa",
+    "image_link": "images/the-recognition-of-shakuntala.jpg"
   },
   {
-    "author": "Yasunari Kawabata",
-    "image_link": "images/the-sound-of-the-mountain.jpg",
+    "_id": "01",
     "title": "The Sound of the Mountain",
+    "publication": "1954",
     "genre": "Mostafizur",
-    "publication": "1954"
+    "author": "Yasunari Kawabata",
+    "image_link": "images/the-sound-of-the-mountain.jpg"
   },
   {
-    "author": "Nikos Kazantzakis",
-    "image_link": "images/zorba-the-greek.jpg",
+    "_id": "01",
     "title": "Zorba the Greek",
+    "publication": "1946",
     "genre": "Mostafizur",
-    "publication": "1946"
+    "author": "Nikos Kazantzakis",
+    "image_link": "images/zorba-the-greek.jpg"
   },
   {
-    "author": "D. H. Lawrence",
-    "image_link": "images/sons-and-lovers.jpg",
+    "_id": "01",
     "title": "Sons and Lovers",
+    "publication": "1913",
     "genre": "Mostafizur",
-    "publication": "1913"
+    "author": "D. H. Lawrence",
+    "image_link": "images/sons-and-lovers.jpg"
   },
   {
-    "author": "Halld\u00f3r Laxness",
-    "image_link": "images/independent-people.jpg",
+    "_id": "01",
     "title": "Independent People",
+    "publication": "1934",
     "genre": "Mostafizur",
-    "publication": "1934"
+    "author": "Halld\u00f3r Laxness",
+    "image_link": "images/independent-people.jpg"
   },
   {
-    "author": "Giacomo Leopardi",
-    "image_link": "images/poems-giacomo-leopardi.jpg",
+    "_id": "01",
     "title": "Poems",
+    "publication": "1818",
     "genre": "Mostafizur",
-    "publication": "1818"
+    "author": "Giacomo Leopardi",
+    "image_link": "images/poems-giacomo-leopardi.jpg"
   },
   {
-    "author": "Doris Lessing",
-    "image_link": "images/the-golden-notebook.jpg",
+    "_id": "01",
     "title": "The Golden Notebook",
+    "publication": "1962",
     "genre": "Mostafizur",
-    "publication": "1962"
+    "author": "Doris Lessing",
+    "image_link": "images/the-golden-notebook.jpg"
   },
   {
-    "author": "Astrid Lindgren",
-    "image_link": "images/pippi-longstocking.jpg",
+    "_id": "01",
     "title": "Pippi Longstocking",
+    "publication": "1945",
     "genre": "Mostafizur",
-    "publication": "1945"
+    "author": "Astrid Lindgren",
+    "image_link": "images/pippi-longstocking.jpg"
   },
   {
-    "author": "Lu Xun",
-    "image_link": "images/diary-of-a-madman.jpg",
+    "_id": "01",
     "title": "Diary of a Madman",
+    "publication": "1918",
     "genre": "Mostafizur",
-    "publication": "1918"
+    "author": "Lu Xun",
+    "image_link": "images/diary-of-a-madman.jpg"
   },
   {
-    "author": "Naguib Mahfouz",
-    "image_link": "images/children-of-gebelawi.jpg",
+    "_id": "01",
     "title": "Children of Gebelawi",
+    "publication": "1959",
     "genre": "Mostafizur",
-    "publication": "1959"
+    "author": "Naguib Mahfouz",
+    "image_link": "images/children-of-gebelawi.jpg"
   },
   {
-    "author": "Thomas Mann",
-    "image_link": "images/buddenbrooks.jpg",
+    "_id": "01",
     "title": "Buddenbrooks",
+    "publication": "1901",
     "genre": "Mostafizur",
-    "publication": "1901"
-  },
-  {
     "author": "Thomas Mann",
-    "image_link": "images/the-magic-mountain.jpg",
+    "image_link": "images/buddenbrooks.jpg"
+  },
+  {
+    "_id": "01",
     "title": "The Magic Mountain",
+    "publication": "1924",
     "genre": "Mostafizur",
-    "publication": "1924"
+    "author": "Thomas Mann",
+    "image_link": "images/the-magic-mountain.jpg"
   },
   {
-    "author": "Herman Melville",
-    "image_link": "images/moby-dick.jpg",
+    "_id": "01",
     "title": "Moby Dick",
+    "publication": "1851",
     "genre": "Mostafizur",
-    "publication": "1851"
+    "author": "Herman Melville",
+    "image_link": "images/moby-dick.jpg"
   },
   {
-    "author": "Michel de Montaigne",
-    "image_link": "images/essais.jpg",
+    "_id": "01",
     "title": "Essays",
+    "publication": "1595",
     "genre": "Mostafizur",
-    "publication": "1595"
+    "author": "Michel de Montaigne",
+    "image_link": "images/essais.jpg"
   },
   {
-    "author": "Elsa Morante",
-    "image_link": "images/history.jpg",
+    "_id": "01",
     "title": "History",
+    "publication": "1974",
     "genre": "Mostafizur",
-    "publication": "1974"
+    "author": "Elsa Morante",
+    "image_link": "images/history.jpg"
   },
   {
-    "author": "Toni Morrison",
-    "image_link": "images/beloved.jpg",
+    "_id": "01",
     "title": "Beloved",
+    "publication": "1987",
     "genre": "Mostafizur",
-    "publication": "1987"
+    "author": "Toni Morrison",
+    "image_link": "images/beloved.jpg"
   },
   {
-    "author": "Murasaki Shikibu",
-    "image_link": "images/the-tale-of-genji.jpg",
+    "_id": "01",
     "title": "The Tale of Genji",
+    "publication": "1006",
     "genre": "Mostafizur",
-    "publication": "1006"
+    "author": "Murasaki Shikibu",
+    "image_link": "images/the-tale-of-genji.jpg"
   },
   {
-    "author": "Robert Musil",
-    "image_link": "images/the-man-without-qualities.jpg",
+    "_id": "01",
     "title": "The Man Without Qualities",
+    "publication": "1931",
     "genre": "Mostafizur",
-    "publication": "1931"
+    "author": "Robert Musil",
+    "image_link": "images/the-man-without-qualities.jpg"
   },
   {
-    "author": "Vladimir Nabokov",
-    "image_link": "images/lolita.jpg",
+    "_id": "01",
     "title": "Lolita",
+    "publication": "1955",
     "genre": "Mostafizur",
-    "publication": "1955"
+    "author": "Vladimir Nabokov",
+    "image_link": "images/lolita.jpg"
   },
   {
-    "author": "George Orwell",
-    "image_link": "images/nineteen-eighty-four.jpg",
+    "_id": "01",
     "title": "Nineteen Eighty-Four",
+    "publication": "1949",
     "genre": "Mostafizur",
-    "publication": "1949"
+    "author": "George Orwell",
+    "image_link": "images/nineteen-eighty-four.jpg"
   },
   {
-    "author": "Ovid",
-    "image_link": "images/the-metamorphoses-of-ovid.jpg",
+    "_id": "01",
     "title": "Metamorphoses",
+    "publicationr": " 100",
     "genre": "Mostafizur",
-    "publicationr": " 100"
+    "author": "Ovid",
+    "image_link": "images/the-metamorphoses-of-ovid.jpg"
   },
   {
-    "author": "Fernando Pessoa",
-    "image_link": "images/the-book-of-disquiet.jpg",
+    "_id": "01",
     "title": "The Book of Disquiet",
+    "publication": "1928",
     "genre": "Mostafizur",
-    "publication": "1928"
+    "author": "Fernando Pessoa",
+    "image_link": "images/the-book-of-disquiet.jpg"
   },
   {
-    "author": "Edgar Allan Poe",
-    "image_link": "images/tales-and-poems-of-edgar-allan-poe.jpg",
+    "_id": "01",
     "title": "Tales",
+    "publication": "1950",
     "genre": "Mostafizur",
-    "publication": "1950"
+    "author": "Edgar Allan Poe",
+    "image_link": "images/tales-and-poems-of-edgar-allan-poe.jpg"
   },
   {
-    "author": "Marcel Proust",
-    "image_link": "images/a-la-recherche-du-temps-perdu.jpg",
+    "_id": "01",
     "title": "In Search of Lost Time",
+    "publication": "1920",
     "genre": "Mostafizur",
-    "publication": "1920"
+    "author": "Marcel Proust",
+    "image_link": "images/a-la-recherche-du-temps-perdu.jpg"
   },
   {
-    "author": "Fran\u00e7ois Rabelais",
-    "image_link": "images/gargantua-and-pantagruel.jpg",
+    "_id": "01",
     "title": "Gargantua and Pantagruel",
+    "publication": "1533",
     "genre": "Mostafizur",
-    "publication": "1533"
+    "author": "Fran\u00e7ois Rabelais",
+    "image_link": "images/gargantua-and-pantagruel.jpg"
   },
   {
-    "author": "Juan Rulfo",
-    "image_link": "images/pedro-paramo.jpg",
+    "_id": "01",
     "title": "Pedro P\u00e1ramo",
+    "publication": "1955",
     "genre": "Mostafizur",
-    "publication": "1955"
+    "author": "Juan Rulfo",
+    "image_link": "images/pedro-paramo.jpg"
   },
   {
-    "author": "Rumi",
-    "image_link": "images/the-masnavi.jpg",
+    "_id": "01",
     "title": "The Masnavi",
+    "publication": "1236",
     "genre": "Mostafizur",
-    "publication": "1236"
+    "author": "Rumi",
+    "image_link": "images/the-masnavi.jpg"
   },
   {
-    "author": "Salman Rushdie",
-    "image_link": "images/midnights-children.jpg",
+    "_id": "01",
     "title": "Midnight's Children",
+    "publication": "1981",
     "genre": "Mostafizur",
-    "publication": "1981"
+    "author": "Salman Rushdie",
+    "image_link": "images/midnights-children.jpg"
   },
   {
-    "author": "Saadi",
-    "image_link": "images/bostan.jpg",
+    "_id": "01",
     "title": "Bostan",
+    "publication": "1257",
     "genre": "Mostafizur",
-    "publication": "1257"
+    "author": "Saadi",
+    "image_link": "images/bostan.jpg"
   },
   {
-    "author": "Tayeb Salih",
-    "image_link": "images/season-of-migration-to-the-north.jpg",
+    "_id": "01",
     "title": "Season of Migration to the North",
+    "publication": "1966",
     "genre": "Mostafizur",
-    "publication": "1966"
+    "author": "Tayeb Salih",
+    "image_link": "images/season-of-migration-to-the-north.jpg"
   },
   {
-    "author": "Jos\u00e9 Saramago",
-    "image_link": "images/blindness.jpg",
+    "_id": "01",
     "title": "Blindness",
+    "publication": "1995",
     "genre": "Mostafizur",
-    "publication": "1995"
+    "author": "Jos\u00e9 Saramago",
+    "image_link": "images/blindness.jpg"
   },
   {
-    "author": "William Shakespeare",
-    "image_link": "images/hamlet.jpg",
+    "_id": "01",
     "title": "Hamlet",
+    "publication": "1603",
     "genre": "Mostafizur",
-    "publication": "1603"
+    "author": "William Shakespeare",
+    "image_link": "images/hamlet.jpg"
   },
   {
-    "author": "William Shakespeare",
-    "image_link": "images/king-lear.jpg",
+    "_id": "01",
     "title": "King Lear",
+    "publication": "1608",
     "genre": "Mostafizur",
-    "publication": "1608"
-  },
-  {
     "author": "William Shakespeare",
-    "image_link": "images/othello.jpg",
+    "image_link": "images/king-lear.jpg"
+  },
+  {
+    "_id": "01",
     "title": "Othello",
+    "publication": "1609",
     "genre": "Mostafizur",
-    "publication": "1609"
+    "author": "William Shakespeare",
+    "image_link": "images/othello.jpg"
   },
   {
-    "author": "Sophocles",
-    "image_link": "images/oedipus-the-king.jpg",
+    "_id": "01",
     "title": "Oedipus the King",
+    "publication": "-430",
     "genre": "Mostafizur",
-    "publication": "-430"
+    "author": "Sophocles",
+    "image_link": "images/oedipus-the-king.jpg"
   },
   {
-    "author": "Stendhal",
-    "image_link": "images/le-rouge-et-le-noir.jpg",
+    "_id": "01",
     "title": "The Red and the Black",
+    "publication": "1830",
     "genre": "Mostafizur",
-    "publication": "1830"
+    "author": "Stendhal",
+    "image_link": "images/le-rouge-et-le-noir.jpg"
   },
   {
-    "author": "Laurence Sterne",
-    "image_link": "images/the-life-and-opinions-of-tristram-shandy.jpg",
+    "_id": "01",
     "title": "The Life And Opinions of Tristram Shandy",
+    "publication": "1760",
     "genre": "Mostafizur",
-    "publication": "1760"
+    "author": "Laurence Sterne",
+    "image_link": "images/the-life-and-opinions-of-tristram-shandy.jpg"
   },
   {
-    "author": "Italo Svevo",
-    "image_link": "images/confessions-of-zeno.jpg",
+    "_id": "01",
     "title": "Confessions of Zeno",
+    "publication": "1923",
     "genre": "Mostafizur",
-    "publication": "1923"
+    "author": "Italo Svevo",
+    "image_link": "images/confessions-of-zeno.jpg"
   },
   {
-    "author": "Jonathan Swift",
-    "image_link": "images/gullivers-travels.jpg",
+    "_id": "01",
     "title": "Gulliver's Travels",
+    "publication": "1726",
     "genre": "Mostafizur",
-    "publication": "1726"
+    "author": "Jonathan Swift",
+    "image_link": "images/gullivers-travels.jpg"
   },
   {
-    "author": "Leo Tolstoy",
-    "image_link": "images/war-and-peace.jpg",
+    "_id": "01",
     "title": "War and Peace",
+    "publication": "1867",
     "genre": "Mostafizur",
-    "publication": "1867"
+    "author": "Leo Tolstoy",
+    "image_link": "images/war-and-peace.jpg"
   },
   {
-    "author": "Leo Tolstoy",
-    "image_link": "images/anna-karenina.jpg",
+    "_id": "01",
     "title": "Anna Karenina",
+    "publication": "1877",
     "genre": "Mostafizur",
-    "publication": "1877"
-  },
-  {
     "author": "Leo Tolstoy",
-    "image_link": "images/the-death-of-ivan-ilyich.jpg",
+    "image_link": "images/anna-karenina.jpg"
+  },
+  {
+    "_id": "01",
     "title": "The Death of Ivan Ilyich",
+    "publication": "1886",
     "genre": "Mostafizur",
-    "publication": "1886"
+    "author": "Leo Tolstoy",
+    "image_link": "images/the-death-of-ivan-ilyich.jpg"
   },
   {
-    "author": "Mark Twain",
-    "image_link": "images/the-adventures-of-huckleberry-finn.jpg",
+    "_id": "01",
     "title": "The Adventures of Huckleberry Finn",
+    "publication": "1884",
     "genre": "Mostafizur",
-    "publication": "1884"
+    "author": "Mark Twain",
+    "image_link": "images/the-adventures-of-huckleberry-finn.jpg"
   },
   {
-    "author": "Valmiki",
-    "image_link": "images/ramayana.jpg",
+    "_id": "01",
     "title": "Ramayana",
+    "publication": "-450",
     "genre": "Mostafizur",
-    "publication": "-450"
+    "author": "Valmiki",
+    "image_link": "images/ramayana.jpg"
   },
   {
-    "author": "Virgil",
-    "image_link": "images/the-aeneid.jpg",
+    "_id": "01",
     "title": "The Aeneid",
+    "publicationr": " -23",
     "genre": "Mostafizur",
-    "publicationr": " -23"
+    "author": "Virgil",
+    "image_link": "images/the-aeneid.jpg"
   },
   {
-    "author": "Vyasa",
-    "image_link": "images/the-mahab-harata.jpg",
+    "_id": "01",
     "title": "Mahabharata",
+    "publication": "-700",
     "genre": "Mostafizur",
-    "publication": "-700"
+    "author": "Vyasa",
+    "image_link": "images/the-mahab-harata.jpg"
   },
   {
-    "author": "Walt Whitman",
-    "image_link": "images/leaves-of-grass.jpg",
+    "_id": "01",
     "title": "Leaves of Grass",
+    "publication": "1855",
     "genre": "Mostafizur",
-    "publication": "1855"
+    "author": "Walt Whitman",
+    "image_link": "images/leaves-of-grass.jpg"
   },
   {
-    "author": "Virginia Woolf",
-    "image_link": "images/mrs-dalloway.jpg",
+    "_id": "01",
     "title": "Mrs Dalloway",
+    "publication": "1925",
     "genre": "Mostafizur",
-    "publication": "1925"
-  },
-  {
     "author": "Virginia Woolf",
-    "image_link": "images/to-the-lighthouse.jpg",
-    "title": "To the Lighthouse",
-    "genre": "Mostafizur",
-    "publication": "1927"
+    "image_link": "images/mrs-dalloway.jpg"
   },
   {
-    "author": "Marguerite Yourcenar",
-    "image_link": "images/memoirs-of-hadrian.jpg",
-    "title": "Memoirs of Hadrian",
+    "_id": "01",
+    "title": "To the Lighthouse",
+    "publication": "1927",
     "genre": "Mostafizur",
-    "publication": "1951"
+    "author": "Virginia Woolf",
+    "image_link": "images/to-the-lighthouse.jpg"
+  },
+  {
+    "_id": "01",
+    "title": "Memoirs of Hadrian",
+    "publication": "1951",
+    "genre": "Mostafizur",
+    "author": "Marguerite Yourcenar",
+    "image_link": "images/memoirs-of-hadrian.jpg"
   }
 ]

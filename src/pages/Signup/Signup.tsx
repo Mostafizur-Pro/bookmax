@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import { useAppDispatch } from "../../redux/hook";
+import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import { createUser } from "../../redux/feature/user/userSlice";
 
 export default function Signup() {
+  const navigate = useNavigate();
+  const { user, isLoading } = useAppSelector((state) => state.user);
   // const [error, setError] = useState(null);
   const dispatch = useAppDispatch();
   const handleSubmit = (event: React.SyntheticEvent) => {
@@ -27,9 +29,15 @@ export default function Signup() {
         password: event.target.password.value,
       })
     );
+
     // console.log(name, image, email, password, conPassword);
     console.log(event.target.email.value, event.target.password.value);
   };
+  React.useEffect(() => {
+    if (user.email && !isLoading) {
+      navigate("/");
+    }
+  }, [user.email, isLoading]);
   return (
     <div>
       {" "}

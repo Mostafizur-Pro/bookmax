@@ -28,6 +28,7 @@ const routes = createBrowserRouter([
         path: "/signUp",
         element: <Signup />,
       },
+
       // {
       //   path: "/allbooks/:category",
       //   element: <AllBooks />,

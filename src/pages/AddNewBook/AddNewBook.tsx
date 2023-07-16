@@ -52,6 +52,7 @@ export default function AddNewBook() {
           console.log("object", userInfo);
           //   postBook(userInfo);
           dispatch(postApi(userInfo.book));
+          alert("Successfully Add Your Product");
         }
       });
   };
@@ -158,42 +159,8 @@ export default function AddNewBook() {
           </div>
 
           <br />
-          {/* <input className="btn btn-accent w-full" type="submit" value="Submit" /> */}
-          {/* The button to open modal */}
-          <label htmlFor="my-modal" className="btn">
-            open modal
-          </label>
 
-          {/* Put this part before </body> tag */}
-          <input type="checkbox" id="my-modal" className="modal-toggle" />
-          <div className="modal">
-            <div className="modal-box">
-              <h3 className="font-bold text-lg">
-                Do you Add your Book, Please Submit !
-              </h3>
-              {/* <p className="py-4">
-        You've been selected for a chance to get one year of subscription
-        to use Wikipedia for free!
-      </p> */}
-
-              <div className="modal-action">
-                <input
-                  className="btn btn-outline "
-                  type="submit"
-                  value="Submit"
-                />
-                <label
-                  htmlFor="my-modal"
-                  type="submit"
-                  value="Submit"
-                  className="btn"
-                >
-                  Cancel
-                </label>
-                {/* <input className="btn btn-accent w-full" type="submit" value="Submit" /> */}
-              </div>
-            </div>
-          </div>
+          <input className="btn btn-outline " type="submit" value="Submit" />
         </form>
       </div>
     </div>
