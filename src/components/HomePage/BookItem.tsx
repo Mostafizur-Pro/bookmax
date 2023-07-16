@@ -1,15 +1,32 @@
 import { useEffect, useState } from "react";
-import { IBooks } from "../../types/globalTypes";
+import { useDispatch, useSelector } from "react-redux";
+// import { IBooks } from "../../types/globalTypes";
 import { Link } from "react-router-dom";
+import { fetchBooks } from "../../redux/feature/book/bookGetSlice";
 
 export default function BookItem() {
-  const [data, setData] = useState<IBooks[]>([]);
+  const dispatch = useDispatch();
+  const { data, loading, error } = useSelector((state) => state.books);
+
   useEffect(() => {
-    void fetch("../../../public/books.json")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
-  // console.log(data);
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  // const [data, setData] = useState<IBooks[]>([]);
+  // useEffect(() => {
+  //   void fetch("../../../public/books.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data));
+  // }, []);
+  console.log("book", data);
   return (
     <div className="mt-10 mx-10">
       <div className="text-center">
@@ -21,7 +38,7 @@ export default function BookItem() {
           15,000 free ebooks waiting to be discovered.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-5">
+      {/* <div className="grid grid-cols-4 gap-5">
         {data.slice(0, 10).map((item) => (
           <>
             <section className="mt-4">
@@ -59,7 +76,8 @@ export default function BookItem() {
             </section>
           </>
         ))}
-      </div>
+      </div> */}
+
       <div className="text-center mt-10 ">
         <Link to="/allbooks">
           <button className="btn text-sm rounded-none  btn-outline">
