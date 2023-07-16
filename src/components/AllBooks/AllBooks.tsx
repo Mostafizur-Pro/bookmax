@@ -10,11 +10,47 @@ export default function AllBooks() {
   }, []);
   return (
     <div>
-      <div className="grid grid-cols-4 gap-5">
-        {data.slice(0, 12).map((item) => (
+      <div className="">
+        {data.slice(0, 10).map((item) => (
           <>
-            <section className="mt-4">
-              <div className="card w-64 bg-base-100 shadow-xl">
+            <section className="mt-10 mr-10">
+              <div className="card card-side bg-base-100 shadow-xl">
+                <figure className="h-72">
+                  <img src={item.image_link} alt="Books" className=" w-56" />
+                </figure>
+                <div className="card-body ">
+                  <div>
+                    <div className="card-actions mt-2 justify-start">
+                      <div className="badge badge-outline mr-3">
+                        {item.genre}
+                      </div>{" "}
+                    </div>
+                    <div>
+                      <h2 id="font3" className="card-title">
+                        {item.title}
+                      </h2>
+                      <p className="text-gray-400 text-sm">By: {item.author}</p>
+                      <p id="font3" className="italic text-sm mt-10">
+                        First published in {item.publication}
+                      </p>
+                      <p id="font3" className="italic text-sm">
+                        1 edition
+                      </p>
+
+                      <p className="text-gray-400 text-sm">
+                        Genre :{item.genre}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-center ">
+                    <button className="btn text-sm rounded-none  btn-outline">
+                      See Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="card w-64 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     src={item.image_link}
@@ -44,7 +80,7 @@ export default function AllBooks() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </section>
           </>
         ))}

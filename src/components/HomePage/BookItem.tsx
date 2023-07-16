@@ -11,7 +11,7 @@ export default function BookItem() {
   }, []);
   // console.log(data);
   return (
-    <div className="mt-10">
+    <div className="mt-10 mx-10">
       <div className="text-center">
         <h1 id="font1" className="text-3xl italic mb-5">
           Action & Adventure Collection
@@ -61,7 +61,7 @@ export default function BookItem() {
         ))}
       </div>
       <div className="text-center mt-10 ">
-        <Link to="/">
+        <Link to="/allbooks">
           <button className="btn text-sm rounded-none  btn-outline">
             {" "}
             See All Book
