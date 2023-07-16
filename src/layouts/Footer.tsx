@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import { IconContext } from "react-icons";
+import logo from "../assets/logo/logo.png";
 
 export default function Footer() {
   return (
@@ -13,8 +14,11 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between container mx-auto font-Libre mb-16 py-10 px-3 lg:px-0">
           <aside className="">
             <h1 className="text-3xl capitalize text-black font-semibold mb-5">
-              <Link to="/">
-                𝘽𝙊𝙊𝙆<span className="text-red-200 ">𝙈𝘼𝙓</span>
+              <Link className="flex items-center " to="/">
+                <img className="w-10 h-10" src={logo} />
+                <h1>
+                  𝘽𝙊𝙊𝙆<span className="text-red-200 ">𝙈𝘼𝙓</span>
+                </h1>
               </Link>
             </h1>
             <p className="text-[16px] text-[#121212] mb-5">

@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../redux/hook";
 import { signOut } from "firebase/auth";
 import { setUser } from "../redux/feature/user/userSlice";
 import { auth } from "../lib/firebase";
+import logo from "../assets/logo/logo.png";
 
 export default function Navbar() {
   const { user } = useAppSelector((state) => state.user);
@@ -82,8 +83,13 @@ export default function Navbar() {
             {menuItem}
           </ul>
         </div>
-        <Link to="/" className=" normal-case text-xl ml-10">
-          𝘽𝙊𝙊𝙆<span className="text-red-200 ">𝙈𝘼𝙓</span>
+        <Link to="/" className=" normal-case flex items-center  text-xl ml-10">
+          <img className="w-5 h-5" src={logo} />
+          <h1>
+            {" "}
+            𝘽𝙊𝙊𝙆
+            <span className="text-red-200 ">𝙈𝘼𝙓</span>
+          </h1>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
