@@ -11,6 +11,7 @@ export const api = createApi({
     "deleteBook",
     "bookReview",
     "addSingleBook",
+    "filterBook",
   ],
   endpoints: () => ({}),
 });

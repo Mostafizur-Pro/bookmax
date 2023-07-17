@@ -50,6 +50,13 @@ const booksApi = api.injectEndpoints({
         body: data,
       }),
     }),
+    getFilterBooks: builder.query({
+      query: ({ search, genre, publication }) => ({
+        url: `/books/get-book?genre=${genre}`,
+        params: { search, genre, publication },
+        providesTags: ["filterBook"],
+      }),
+    }),
     // ---------------------------------------------
     // getAllBooks: builder.query({
     //   query: ({ search, genre, publication }) => ({
@@ -73,6 +80,7 @@ const booksApi = api.injectEndpoints({
 
 export const {
   useUpdateBookMutation,
+  useGetFilterBooksQuery,
   useAddBookMutation,
   useDeleteBookMutation,
   useGetAllBooksQuery,

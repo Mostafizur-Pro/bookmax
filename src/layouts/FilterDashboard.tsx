@@ -1,13 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-export default function BooksCategories() {
+export default function FilterDashboard() {
   return (
     <div>
+      <Navbar />
       <div className="flex">
-        <div className="mx-10 ">
+        <div className="mx-10 mt-10">
           <form>
-            <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+            <label
+              for="default-search"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            >
               Search
             </label>
             <div className="relative">
@@ -49,40 +54,46 @@ export default function BooksCategories() {
             <h1 className="text-2xl font-bold">Filter</h1>
             <div className="mx-5 my-2 ">
               <li>
-                <Link to="/allbooks/fiction">Fiction</Link>
+                <Link to="/allbooks/Fiction">Fiction</Link>
               </li>
               <li>
-                <Link to="/allbooks/novel">Novel</Link>{" "}
+                <Link to="/allbooks/Novel">Novel</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/science">Science</Link>{" "}
+                <Link to="/allbooks/Science">Science</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/mystery">Mystery</Link>{" "}
+                <Link to="/allbooks/Mystery">Mystery</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/history">History</Link>{" "}
+                <Link to="/allbooks/History">History</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/thriller">Thriller</Link>{" "}
+                <Link to="/allbooks/Thriller">Thriller</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/horror">Horror</Link>{" "}
+                <Link to="/allbooks/Horror">Horror</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/adventure">Adventure</Link>{" "}
+                <Link to="/allbooks/Adventure">Adventure</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/biography">Biography</Link>{" "}
+                <Link to="/allbooks/Biography">Biography</Link>{" "}
               </li>
               <li>
-                <Link to="/allbooks/poetry">Poetry</Link>{" "}
+                <Link to="/allbooks/Poetry">Poetry</Link>{" "}
               </li>
             </div>
             <hr className="my-10" />
           </div>
         </div>
+
+        <div className="ml-10">
+          <Outlet></Outlet>
+        </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

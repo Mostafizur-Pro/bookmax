@@ -7,6 +7,8 @@ import AllBooks from "../pages/AllBooks/AllBooks";
 import DashBoard from "../layouts/DashBoard";
 import AddNewBook from "../pages/AddNewBook/AddNewBook";
 import SingleBookDetails from "../components/SingleBook/SingleBookDetails";
+import BooksFilter from "../components/AllBooks/BooksFilter";
+import FilterDashboard from "../layouts/FilterDashboard";
 
 const routes = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const routes = createBrowserRouter([
         path: "/book-details/:id",
         element: <SingleBookDetails />,
       },
+      // {
+      //   path: "/allbooks/:id",
+      //   element: <BooksFilter />,
+      // },
 
       // {
       //   path: "/allbooks/:category",
@@ -56,6 +62,16 @@ const routes = createBrowserRouter([
       {
         path: "/dashboard/add-new-book",
         element: <AddNewBook />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <FilterDashboard />,
+    children: [
+      {
+        path: "/allbooks/:genre",
+        element: <BooksFilter />,
       },
     ],
   },
