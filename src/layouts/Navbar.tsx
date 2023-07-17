@@ -50,9 +50,9 @@ export default function Navbar() {
       <li className="font-medium">
         <Link to="/dashboard/add-new-book">𝓓𝓪𝓼𝓱𝓫𝓸𝓪𝓻𝓭</Link>
       </li>
-      <li className="font-medium">
+      {/* <li className="font-medium">
         <Link to="/dashboard">𝓓𝓪𝓼𝓱𝓫𝓸𝓪𝓻𝓭</Link>
-      </li>
+      </li> */}
     </>
   );
 

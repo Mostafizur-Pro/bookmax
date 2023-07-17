@@ -9,6 +9,7 @@ import AddNewBook from "../pages/AddNewBook/AddNewBook";
 import SingleBookDetails from "../components/SingleBook/SingleBookDetails";
 import BooksFilter from "../components/AllBooks/BooksFilter";
 import FilterDashboard from "../layouts/FilterDashboard";
+import MyBooks from "../pages/AddNewBook/MyBooks";
 
 const routes = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const routes = createBrowserRouter([
       {
         path: "/dashboard/add-new-book",
         element: <AddNewBook />,
+      },
+      {
+        path: "/dashboard/my-books",
+        element: <MyBooks />,
       },
     ],
   },
