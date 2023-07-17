@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 // import { IBooks } from "../../types/globalTypes";
 import { Link } from "react-router-dom";
-import { fetchBooks } from "../../redux/feature/book/bookGetSlice";
+import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
 
 export default function BookItem() {
-  const dispatch = useDispatch();
-  const { data, loading, error } = useSelector((state) => state.books);
+  const { data } = useGetAllBooksQuery(undefined);
+  console.log("object", data?.data);
+  // const dispatch = useDispatch();
+  // const { data, loading, error } = useSelector((state) => state.books);
 
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchBooks());
+  // }, [dispatch]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   // const [data, setData] = useState<IBooks[]>([]);
   // useEffect(() => {
@@ -26,7 +26,7 @@ export default function BookItem() {
   //     .then((res) => res.json())
   //     .then((data) => setData(data));
   // }, []);
-  console.log("book", data);
+  // console.log("book", data);
   return (
     <div className="mt-10 mx-10">
       <div className="text-center">
@@ -38,8 +38,8 @@ export default function BookItem() {
           15,000 free ebooks waiting to be discovered.
         </p>
       </div>
-      {/* <div className="grid grid-cols-4 gap-5">
-        {data.slice(0, 10).map((item) => (
+      <div className="grid grid-cols-4 gap-5">
+        {data?.data?.slice(0, 10).map((item) => (
           <>
             <section className="mt-4">
               <div className="card w-64 bg-base-100 shadow-xl">
@@ -66,17 +66,19 @@ export default function BookItem() {
                     <p className="text-gray-400 text-sm">By: {item.author}</p>
                   </div>
                   <div className="text-center ">
-                    <button className="btn text-sm rounded-none  btn-outline">
-                      {" "}
-                      See Details
-                    </button>
+                    <Link to={`/book-details/${item._id}`}>
+                      <button className="btn text-sm rounded-none  btn-outline">
+                        {" "}
+                        See Details
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </section>
           </>
         ))}
-      </div> */}
+      </div>
 
       <div className="text-center mt-10 ">
         <Link to="/allbooks">

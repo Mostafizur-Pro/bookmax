@@ -6,6 +6,7 @@ import Signup from "../pages/Signup/Signup";
 import AllBooks from "../pages/AllBooks/AllBooks";
 import DashBoard from "../layouts/DashBoard";
 import AddNewBook from "../pages/AddNewBook/AddNewBook";
+import SingleBookDetails from "../components/SingleBook/SingleBookDetails";
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const routes = createBrowserRouter([
       {
         path: "/signUp",
         element: <Signup />,
+      },
+      {
+        path: "/book-details/:id",
+        element: <SingleBookDetails />,
       },
 
       // {

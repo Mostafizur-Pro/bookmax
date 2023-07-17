@@ -1,15 +1,83 @@
 import { api } from "../../api/apiSlice";
 
-const bookApi = api.injectEndpoints({
+const booksApi = api.injectEndpoints({
   endpoints: (builder) => ({
-    postBook: builder.mutation({
-      query: ({ book }) => ({
-        url: "/books/create-book",
+    addBook: builder.mutation({
+      query: (data) => ({
+        url: `/books/add-book`,
         method: "POST",
-        body: book,
+        body: data,
       }),
+      invalidatesTags: ["addNewBook"],
+    }),
+    bookReview: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/books/${id}`,
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["bookReview"],
+    }),
+    updateBook: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/books/update-book/${id}`,
+        method: "PUT",
+        body: data,
+      }),
+      invalidatesTags: ["bookDetails"],
+    }),
+    deleteBook: builder.mutation({
+      query: (id: string) => ({
+        url: `/books/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["deleteBook"],
+    }),
+    // ---------------------------------------------
+    getAllBooks: builder.query({
+      query: (data) => ({
+        url: "/books/get-book",
+        method: "GET",
+        providesTags: ["addNewBook"],
+        body: data,
+      }),
+    }),
+    getSingleBooks: builder.query({
+      query: ({ id, data }) => ({
+        url: `/books/getSingle-books/${id}`,
+        method: "GET",
+        providesTags: ["addSingleBook"],
+        body: data,
+      }),
+    }),
+    // ---------------------------------------------
+    // getAllBooks: builder.query({
+    //   query: ({ search, genre, publication }) => ({
+    //     url: "/books/get-book",
+    //     params: { search, genre, publication },
+    //     providesTags: ["addNewBook", "deleteBook"],
+    //   }),
+    // }),
+    getRecentBooks: builder.query({
+      query: () => ({
+        url: "/books/recent-published",
+        providesTags: ["addNewBook"],
+      }),
+    }),
+    bookDetails: builder.query({
+      query: (id: string) => `/books/${id}`,
+      providesTags: ["bookDetails", "bookReview"],
     }),
   }),
 });
 
-export const { usePostBookMutation } = bookApi;
+export const {
+  useUpdateBookMutation,
+  useAddBookMutation,
+  useDeleteBookMutation,
+  useGetAllBooksQuery,
+  useGetSingleBooksQuery,
+  useBookDetailsQuery,
+  useGetRecentBooksQuery,
+  useBookReviewMutation,
+} = booksApi;

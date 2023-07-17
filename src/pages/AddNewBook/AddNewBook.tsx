@@ -1,18 +1,15 @@
 import { useForm } from "react-hook-form";
 import { IBooks } from "../../types/globalTypes";
 import { useAppSelector } from "../../redux/hook";
-import { usePostBookMutation } from "../../redux/feature/book/bookApi";
-import { useDispatch } from "react-redux";
-import { postApi } from "../../redux/feature/book/bookSlice";
 
 const imageHostKey = "eaab174463595ddbf478d87978c913ae";
 
 export default function AddNewBook() {
   const { user } = useAppSelector((state) => state.user);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   //   console.log("user", user);
 
-  const [postBook] = usePostBookMutation();
+  // const [postBook] = usePostBookMutation();
   //   console.log("Post", isLoading, isError, isSuccess, postBook);
 
   const {
@@ -51,7 +48,7 @@ export default function AddNewBook() {
 
           console.log("object", userInfo);
           //   postBook(userInfo);
-          dispatch(postApi(userInfo.book));
+          // dispatch(postApi(userInfo.book));
           alert("Successfully Add Your Product");
         }
       });
