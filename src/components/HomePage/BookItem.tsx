@@ -4,29 +4,8 @@ import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
 
 export default function BookItem() {
   const { data } = useGetAllBooksQuery(undefined);
-  console.log("object", data?.data);
-  // const dispatch = useDispatch();
-  // const { data, loading, error } = useSelector((state) => state.books);
+  // console.log("object", data?.data);
 
-  // useEffect(() => {
-  //   dispatch(fetchBooks());
-  // }, [dispatch]);
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (error) {
-  //   return <div>Error: {error}</div>;
-  // }
-
-  // const [data, setData] = useState<IBooks[]>([]);
-  // useEffect(() => {
-  //   void fetch("../../../public/books.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data));
-  // }, []);
-  // console.log("book", data);
   return (
     <div className="mt-10 mx-10">
       <div className="text-center">

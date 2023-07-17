@@ -10,7 +10,7 @@ export default function SingleBookDetails() {
     <div className="mx-auto flex justify-center  ml-10">
       <div className="bg-base-100 ">
         <figure>
-          <img src={data?.data?.image_link} alt="Shoes" />
+          <img className="w-72" src={data?.data?.image_link} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">

@@ -1,22 +1,24 @@
-import { useEffect, useState } from "react";
-import { IBooks } from "../../types/globalTypes";
+import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
+import { Link } from "react-router-dom";
 
 export default function AllBooks() {
-  const [productId, setProductId] = useState(0);
-  const [data, setData] = useState<IBooks[]>([]);
-  useEffect(() => {
-    void fetch("../../../public/books.json")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
+  // const [productId, setProductId] = useState(0);
+  const { data } = useGetAllBooksQuery(undefined);
+  console.log("allbook", data);
+  // const [data, setData] = useState<IBooks[]>([]);
+  // useEffect(() => {
+  //   void fetch("../../../public/books.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data));
+  // }, []);
 
-  const handleId = (item) => {
-    setProductId(item);
-  };
+  // const handleId = (item) => {
+  //   setProductId(item);
+  // };
   return (
     <div>
       <div className="">
-        {data.slice(0, 10).map((item) => (
+        {data?.data?.slice(0, 10).map((item) => (
           <>
             <section className="mt-10 mr-10">
               <div className="card card-side bg-base-100 shadow-xl">
@@ -49,20 +51,14 @@ export default function AllBooks() {
                   </div>
 
                   <div className="text-center ">
-                    {/* <button
-                      htmlFor="my-modal-4"
-                      onClick={() => handleId(item)}
-                      className="btn text-sm rounded-none  btn-outline"
-                    >
-                      See Details
-                    </button> */}
-                    <label
-                      htmlFor="my-modal-4"
-                      onClick={() => handleId(item)}
-                      className="btn text-sm rounded-none  btn-outline"
-                    >
-                      See Details
-                    </label>
+                    <Link to={`/book-details/${item._id}`}>
+                      <button
+                        // onClick={() => handleId(item)}
+                        className="btn text-sm rounded-none  btn-outline"
+                      >
+                        See Details
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -71,31 +67,7 @@ export default function AllBooks() {
         ))}
       </div>
       {/* model */}
-      <div className="">
-        {data.map((item) => (
-          <>
-            {item._id === productId._id && (
-              <>
-                <input
-                  type="checkbox"
-                  id="my-modal-4"
-                  className="modal-toggle"
-                />
-                <label htmlFor="my-modal-4" className="modal cursor-pointer">
-                  <label className="modal-box relative" htmlFor="">
-                    <img className="w-72  " src={item.image_link} alt="Drink" />
-                    <h3 className="text-4xl mt-5 font-bold">{item.title}</h3>
-                    <p className="py-4">{item.author}</p>
-                    <p id="font3" className="italic text-sm">
-                      First published in {item.publication}
-                    </p>
-                  </label>
-                </label>
-              </>
-            )}
-          </>
-        ))}
-      </div>
+      <div className=""></div>
       {/* model */}
       <div className="mt-10 join ">
         <input
