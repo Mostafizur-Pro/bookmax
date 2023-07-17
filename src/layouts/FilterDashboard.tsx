@@ -1,8 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useGetAllBooksQuery } from "../redux/feature/book/bookApi";
 
 export default function FilterDashboard() {
+  const { data } = useGetAllBooksQuery(undefined);
+  const genre = [];
+  if (data) {
+    data?.data?.forEach((item) => {
+      if (!genre.includes(item.genre)) {
+        genre.push(item.genre);
+      }
+    });
+  }
+
   return (
     <div>
       <Navbar />
@@ -49,40 +60,14 @@ export default function FilterDashboard() {
             </div>
           </form>
           <hr className="my-10" />
-
           <div>
-            <h1 className="text-2xl font-bold">Filter</h1>
+            <h1 className="text-xl font-bold">Filter</h1>
             <div className="mx-5 my-2 ">
-              <li>
-                <Link to="/allbooks/Fiction">Fiction</Link>
-              </li>
-              <li>
-                <Link to="/allbooks/Novel">Novel</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Science">Science</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Mystery">Mystery</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/History">History</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Thriller">Thriller</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Horror">Horror</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Adventure">Adventure</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Biography">Biography</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/Poetry">Poetry</Link>{" "}
-              </li>
+              {genre.map((item) => (
+                <li>
+                  <Link to={`/allbooks/${item}`}>{item}</Link>
+                </li>
+              ))}
             </div>
             <hr className="my-10" />
           </div>

@@ -1,7 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
 
 export default function BooksCategories() {
+  const { data } = useGetAllBooksQuery(undefined);
+  const genre = [];
+  if (data) {
+    data?.data?.forEach((item) => {
+      if (!genre.includes(item.genre)) {
+        genre.push(item.genre);
+      }
+    });
+  }
+
   return (
     <div>
       <div className="flex">
@@ -46,38 +57,13 @@ export default function BooksCategories() {
           <hr className="my-10" />
 
           <div>
-            <h1 className="text-2xl font-bold">Filter</h1>
+            <h1 className="text-xl font-bold">Filter</h1>
             <div className="mx-5 my-2 ">
-              <li>
-                <Link to="/allbooks/fiction">Fiction</Link>
-              </li>
-              <li>
-                <Link to="/allbooks/novel">Novel</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/science">Science</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/mystery">Mystery</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/history">History</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/thriller">Thriller</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/horror">Horror</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/adventure">Adventure</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/biography">Biography</Link>{" "}
-              </li>
-              <li>
-                <Link to="/allbooks/poetry">Poetry</Link>{" "}
-              </li>
+              {genre.map((item) => (
+                <li>
+                  <Link to={`/allbooks/${item}`}>{item}</Link>
+                </li>
+              ))}
             </div>
             <hr className="my-10" />
           </div>
