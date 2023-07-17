@@ -2,19 +2,9 @@ import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
 import { Link } from "react-router-dom";
 
 export default function AllBooks() {
-  // const [productId, setProductId] = useState(0);
   const { data } = useGetAllBooksQuery(undefined);
-  console.log("allbook", data);
-  // const [data, setData] = useState<IBooks[]>([]);
-  // useEffect(() => {
-  //   void fetch("../../../public/books.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data));
-  // }, []);
+  // console.log("allbook", data);
 
-  // const handleId = (item) => {
-  //   setProductId(item);
-  // };
   return (
     <div>
       <div className="">
