@@ -19,7 +19,7 @@ export default function BooksBanner() {
                 <Link to="/">Home </Link>
 
                 <FaAngleRight />
-                <Link to="/products/spa">All Books</Link>
+                <Link to="/allbooks">All Books</Link>
               </div>
             </div>
           </div>
