@@ -1,7 +1,7 @@
 // import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export const fetchBooks = createAsyncThunk("books/fetchAll", async () => {
   try {
@@ -14,12 +14,6 @@ export const fetchBooks = createAsyncThunk("books/fetchAll", async () => {
     throw error;
   }
 });
-// const [data, setData] = useState<IBooks[]>([]);
-// useEffect(() => {
-//   void fetch("http://localhost:5000/api/v1/books")
-//     .then((res) => res.json())
-//     .then((data) => setData(data));
-// }, []);
 
 const booksGetSlice = createSlice({
   name: "books",
@@ -39,9 +33,9 @@ const booksGetSlice = createSlice({
         state.loading = false;
         state.data = action.payload;
       })
-      .addCase(fetchBooks.rejected, (state, action) => {
+      .addCase(fetchBooks.rejected, (state) => {
         state.loading = false;
-        state.error = action.error.message;
+        // state.error = action.error.message;
       });
   },
 });

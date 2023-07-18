@@ -1,14 +1,14 @@
 import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
 import { Link } from "react-router-dom";
+import { IBooks } from "../../types/globalTypes";
 
 export default function AllBooks() {
   const { data } = useGetAllBooksQuery(undefined);
-  // console.log("allbook", data);
 
   return (
     <div>
       <div className="">
-        {data?.data?.slice(0, 10).map((item) => (
+        {data?.data?.slice(0, 10).map((item: IBooks) => (
           <>
             <section className="mt-10 mr-10">
               <div className="card card-side bg-base-100 shadow-xl">

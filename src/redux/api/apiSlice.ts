@@ -6,12 +6,12 @@ export const api = createApi({
     baseUrl: "https://bookmax-server.vercel.app/api/v1",
   }),
   tagTypes: [
-    "createBook",
     "bookDetails",
     "deleteBook",
     "bookReview",
     "addSingleBook",
     "filterBook",
+    "createBook",
   ],
   endpoints: () => ({}),
 });

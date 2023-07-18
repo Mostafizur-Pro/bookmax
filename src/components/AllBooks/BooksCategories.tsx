@@ -1,12 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
+import { IBooks } from "../../types/globalTypes";
 
 export default function BooksCategories() {
   const { data } = useGetAllBooksQuery(undefined);
-  const genre = [];
+  const genre: any = [];
   if (data) {
-    data?.data?.forEach((item) => {
+    data?.data?.forEach((item: IBooks) => {
       if (!genre.includes(item.genre)) {
         genre.push(item.genre);
       }
@@ -59,7 +59,7 @@ export default function BooksCategories() {
           <div>
             <h1 className="text-xl font-bold">Filter</h1>
             <div className="mx-5 my-2 ">
-              {genre.map((item) => (
+              {genre.map((item: string) => (
                 <li>
                   <Link to={`/allbooks/${item}`}>{item}</Link>
                 </li>

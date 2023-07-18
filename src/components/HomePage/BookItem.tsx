@@ -1,6 +1,7 @@
 // import { IBooks } from "../../types/globalTypes";
 import { Link } from "react-router-dom";
 import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
+import { IBooks } from "../../types/globalTypes";
 
 export default function BookItem() {
   const { data } = useGetAllBooksQuery(undefined);
@@ -18,7 +19,7 @@ export default function BookItem() {
         </p>
       </div>
       <div className="grid grid-cols-4 gap-5">
-        {data?.data?.slice(0, 10).map((item) => (
+        {data?.data?.slice(0, 10).map((item: IBooks) => (
           <>
             <section className="mt-4">
               <div className="card w-64 bg-base-100 shadow-xl">

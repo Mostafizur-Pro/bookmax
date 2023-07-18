@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useGetFilterBooksQuery } from "../../redux/feature/book/bookApi";
+import { IBooks } from "../../types/globalTypes";
 
 export default function BooksFilter() {
   const { genre } = useParams();
@@ -9,7 +10,7 @@ export default function BooksFilter() {
   return (
     <div>
       <div className="">
-        {data?.data?.slice(0, 10).map((item) => (
+        {data?.data?.slice(0, 10).map((item: IBooks) => (
           <>
             <section className="mt-10 mr-10">
               <div className="card card-side bg-base-100 shadow-xl">

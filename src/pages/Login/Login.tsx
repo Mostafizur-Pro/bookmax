@@ -1,4 +1,5 @@
 import * as React from "react";
+import { SyntheticEvent } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import { loginUser } from "../../redux/feature/user/userSlice";
@@ -9,14 +10,17 @@ export default function Login() {
   const navigate = useNavigate();
   const { user, isLoading } = useAppSelector((state) => state.user);
 
-  const handleSubmit = (event: React.SyntheticEvent) => {
-    // setLoading(true);
+  const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
+    const target = event.target as typeof event.target & {
+      email: { value: string };
+      password: { value: string };
+    };
 
     dispatch(
       loginUser({
-        email: event.target.email.value,
-        password: event.target.password.value,
+        email: target.email.value,
+        password: target.password.value,
       })
     );
   };

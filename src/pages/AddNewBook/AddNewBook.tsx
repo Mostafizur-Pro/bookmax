@@ -1,28 +1,30 @@
 import { useForm } from "react-hook-form";
 import { IBooks } from "../../types/globalTypes";
 import { useAppSelector } from "../../redux/hook";
-// import { useCreateBookMutation } from "../../redux/feature/book/bookApi";
-import { useDispatch } from "react-redux";
-import { postApi } from "../../redux/feature/book/bookSlice";
+import { useCreateBookMutation } from "../../redux/feature/book/bookApi";
 
 const imageHostKey = "eaab174463595ddbf478d87978c913ae";
 
 export default function AddNewBook() {
   const { user } = useAppSelector((state) => state.user);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const [addBook] = useCreateBookMutation();
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface FormData extends IBooks {}
 
   const {
     register,
     handleSubmit: handleBook,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     formState: { errors },
-  } = useForm();
+  } = useForm<FormData>();
+
   const handleAddNewBook = (data: IBooks) => {
-    console.log("data", data);
     createImage(data);
   };
-
-  const createImage = (data) => {
+  const createImage = (data: FormData) => {
     const image = data.image_link[0];
     const formData = new FormData();
     formData.append("image", image);
@@ -34,7 +36,7 @@ export default function AddNewBook() {
       .then((res) => res.json())
       .then((imgData) => {
         if (imgData.success) {
-          const userInfo = {
+          const bookInfo = {
             book: {
               ...data,
               author: data.author,
@@ -45,13 +47,11 @@ export default function AddNewBook() {
               email: user.email,
             },
           };
+          addBook(bookInfo);
+          // const bookInfo: IBooks = userInfo.book;
+          // dispatch(postApi(bookInfo));
 
-          // console.log("object", userInfo);
-
-          //   postBook(userInfo);
-          dispatch(postApi(userInfo.book));
-          // createBook(userInfo.book);
-          alert("Successfully Add Your Product");
+          // alert("Successfully Add Your Product");
         }
       });
   };
@@ -78,7 +78,7 @@ export default function AddNewBook() {
             className="input input-bordered w-full max-w-lg"
           />
           {errors.title && (
-            <p className="text-red-600">{errors.title?.message}</p>
+            <p className="text-red-600">{errors?.title?.message}</p>
           )}
 
           <div className="flex justify-between gap-5">

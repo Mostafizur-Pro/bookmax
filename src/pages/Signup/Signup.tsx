@@ -1,43 +1,32 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import { createUser } from "../../redux/feature/user/userSlice";
+import { SyntheticEvent } from "react";
 
 export default function Signup() {
   const navigate = useNavigate();
   const { user, isLoading } = useAppSelector((state) => state.user);
-  // const [error, setError] = useState(null);
-  const dispatch = useAppDispatch();
-  const handleSubmit = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    // setError("");
-    // setLoading(true);
-    // const name = event.target.name.value;
-    // const image = event.target.image.files[0];
-    // const email = event.target.email.value;
-    // const password = event.target.password.value;
-    // const conPassword = event.target.conPassword.value;
-    // const radio = event.target.ColorOption.value;
 
-    // if (password !== conPassword) {
-    //   setError("Password does not match!");
-    //   return;
-    // }
+  const dispatch = useAppDispatch();
+  const handleSubmit = (event: SyntheticEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+    const target = event.target as typeof event.target & {
+      email: { value: string };
+      password: { value: string };
+    };
     dispatch(
       createUser({
-        email: event.target.email.value,
-        password: event.target.password.value,
+        email: target.email.value,
+        password: target.password.value,
       })
     );
-
-    // console.log(name, image, email, password, conPassword);
-    console.log(event.target.email.value, event.target.password.value);
   };
-  React.useEffect(() => {
+  useEffect(() => {
     if (user.email && !isLoading) {
       navigate("/");
     }
-  }, [user.email, isLoading]);
+  }, [user.email, isLoading, navigate]);
   return (
     <div>
       {" "}

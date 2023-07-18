@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { IBooks } from "../../../types/globalTypes";
 
 export const postApi = createAsyncThunk(
   "books/postApi",
-  async (bookData, { rejectWithValue }) => {
+  async (bookInfo: IBooks, { rejectWithValue }) => {
     try {
       const response = await axios.post(
         "https://bookmax-server.vercel.app/api/v1/books/create-book",
-        bookData
+        bookInfo
       );
       return response.data;
     } catch (error) {
@@ -16,16 +17,6 @@ export const postApi = createAsyncThunk(
     }
   }
 );
-
-// export const getAllBooks = createAsyncThunk("books/getAllBooks", async () => {
-//   try {
-//     const response = await axios.get("http://localhost:5000/api/v1/books");
-//     return response.data;
-//   } catch (error) {
-//     console.error("Error occurred during GET API request:", error);
-//     throw error;
-//   }
-// });
 
 export const postApiSlice = createSlice({
   name: "books",
@@ -45,22 +36,10 @@ export const postApiSlice = createSlice({
         state.loading = false;
         state.data = action.payload;
       })
-      .addCase(postApi.rejected, (state, action) => {
+      .addCase(postApi.rejected, (state) => {
         state.loading = false;
-        state.error = action.error.message;
+        state.error = null;
       });
-    // .addCase(getAllBooks.pending, (state) => {
-    //   state.loading = true;
-    //   state.error = null;
-    // })
-    // .addCase(getAllBooks.fulfilled, (state, action) => {
-    //   state.loading = false;
-    //   state.data = action.payload;
-    // })
-    // .addCase(getAllBooks.rejected, (state, action) => {
-    //   state.loading = false;
-    //   state.error = action.error.message;
-    // });
   },
 });
 

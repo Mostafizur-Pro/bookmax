@@ -17,7 +17,7 @@ export default function Navbar() {
         // Sign-out successful.
         dispatch(setUser(null));
       })
-      .catch((error) => {
+      .catch(() => {
         // An error happened.
       });
   };

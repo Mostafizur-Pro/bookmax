@@ -5,16 +5,12 @@ export default function ErrorPage() {
     <div>
       <div className="text-center mt-64">
         {/* <img className="w-full" src={img} alt="" />{" "} */}
-        <h3 className="text-7xl mb-5 font-bold">404</h3>
-        <h3 className="text-2xl t font-bold">
-          The page you requested could not be found{" "}
-        </h3>
-        <h3 className="text-xl  font-bold">
-          Please{" "}
-          <span className="text-red-400 text-3xl">
-            <Link to="/">Click Me</Link>
-          </span>
-        </h3>
+        <h3 className="text-9xl mb-10 font-bold">Oops!</h3>
+        <h3 className="text-2xl t font-bold">404 - PAGE NOT FOUND</h3>
+
+        <button className="btn bg-primary text-white mt-10 text-3xl">
+          <Link to="/">Click Me</Link>
+        </button>
       </div>
     </div>
   );

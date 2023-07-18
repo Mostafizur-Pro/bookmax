@@ -2,12 +2,13 @@ import { Link, Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useGetAllBooksQuery } from "../redux/feature/book/bookApi";
+import { IBooks } from "../types/globalTypes";
 
 export default function FilterDashboard() {
   const { data } = useGetAllBooksQuery(undefined);
-  const genre = [];
+  const genre: string[] = [];
   if (data) {
-    data?.data?.forEach((item) => {
+    data?.data?.forEach((item: IBooks) => {
       if (!genre.includes(item.genre)) {
         genre.push(item.genre);
       }
@@ -20,10 +21,7 @@ export default function FilterDashboard() {
       <div className="flex">
         <div className="mx-10 mt-10">
           <form>
-            <label
-              for="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-            >
+            <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
               Search
             </label>
             <div className="relative">
@@ -63,7 +61,7 @@ export default function FilterDashboard() {
           <div>
             <h1 className="text-xl font-bold">Filter</h1>
             <div className="mx-5 my-2 ">
-              {genre.map((item) => (
+              {genre?.map((item) => (
                 <li>
                   <Link to={`/allbooks/${item}`}>{item}</Link>
                 </li>

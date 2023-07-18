@@ -9,7 +9,6 @@ export default function AllBooks() {
           <BooksCategories />
         </div>
         <div className="col-span-3">
-          {/* <ProductsDetails courseItem={categories}></ProductsDetails> */}
           <BooksDetails />
         </div>
       </div>

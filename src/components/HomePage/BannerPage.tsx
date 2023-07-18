@@ -1,9 +1,7 @@
 import bannerImage1 from "../../assets/HomePage/bannerpage.jpg";
-import bannerImage2 from "../../assets/HomePage/banner2.jpg";
 import bannerImage3 from "../../assets/HomePage/banner3.jpg";
 import bannerImage4 from "../../assets/HomePage/banner4.jpg";
-
-import { Zoom } from "react-reveal";
+// import { Zoom } from "react-reveal";
 
 export default function BannerPage() {
   return (
@@ -17,19 +15,17 @@ export default function BannerPage() {
             }}
           >
             <div className="flex justify-around h-96 text-white items-center w-full">
-              <Zoom>
-                <div></div>
-                <div className=" text-left ml-20 ">
-                  <p>CLASSIC BOOKS</p>
+              <div></div>
+              <div className=" text-left ml-20 ">
+                <p>CLASSIC BOOKS</p>
 
-                  <h1 className=" text-4xl font-semibold">Everyone Love's</h1>
-                  <h1 className=" text-4xl font-semibold">Literature</h1>
+                <h1 className=" text-4xl font-semibold">Everyone Love's</h1>
+                <h1 className=" text-4xl font-semibold">Literature</h1>
 
-                  <button className="mt-20 btn rounded-none btn-neutral border-black">
-                    SHOP NOW
-                  </button>
-                </div>
-              </Zoom>
+                <button className="mt-20 btn rounded-none btn-neutral border-black">
+                  SHOP NOW
+                </button>
+              </div>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -49,19 +45,17 @@ export default function BannerPage() {
             }}
           >
             <div className="flex justify-around h-96  items-center w-full">
-              <Zoom>
-                <div className=" text-left ml-20 ">
-                  <p>CLASSIC BOOKS</p>
+              <div className=" text-left ml-20 ">
+                <p>CLASSIC BOOKS</p>
 
-                  <h1 className=" text-4xl font-semibold">Everyone Love's</h1>
-                  <h1 className=" text-4xl font-semibold">Literature</h1>
+                <h1 className=" text-4xl font-semibold">Everyone Love's</h1>
+                <h1 className=" text-4xl font-semibold">Literature</h1>
 
-                  <button className="mt-20 btn rounded-none btn-neutral border-black">
-                    SHOP NOW
-                  </button>
-                </div>
-                <div></div>
-              </Zoom>
+                <button className="mt-20 btn rounded-none btn-neutral border-black">
+                  SHOP NOW
+                </button>
+              </div>
+              <div></div>
             </div>
           </div>
 
@@ -82,19 +76,17 @@ export default function BannerPage() {
             }}
           >
             <div className="flex justify-around h-96 text-white items-center w-full">
-              <Zoom>
-                <div></div>
-                <div className=" text-left ml-20 ">
-                  <p>CLASSIC BOOKS</p>
+              <div></div>
+              <div className=" text-left ml-20 ">
+                <p>CLASSIC BOOKS</p>
 
-                  <h1 className=" text-4xl font-semibold">Everyone Love's</h1>
-                  <h1 className=" text-4xl font-semibold">Literature</h1>
+                <h1 className=" text-4xl font-semibold">Everyone Love's</h1>
+                <h1 className=" text-4xl font-semibold">Literature</h1>
 
-                  <button className="mt-20 btn rounded-none btn-neutral border-black">
-                    SHOP NOW
-                  </button>
-                </div>
-              </Zoom>
+                <button className="mt-20 btn rounded-none btn-neutral border-black">
+                  SHOP NOW
+                </button>
+              </div>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

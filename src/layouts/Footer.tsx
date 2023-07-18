@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
-import { IconContext } from "react-icons";
 import logo from "../assets/logo/logo.png";
 
 export default function Footer() {
@@ -27,15 +26,13 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center text-[14px] space-x-3 mb-3">
-              <IconContext.Provider value={{ size: 16 }}>
-                <FaPhoneAlt />
-              </IconContext.Provider>
+              <FaPhoneAlt />
+
               <p>Call Us : +880 1950 165017</p>
             </div>
             <div className="flex items-center text-[14px] space-x-3">
-              <IconContext.Provider value={{ size: 19 }}>
-                <IoMdMailOpen />
-              </IconContext.Provider>
+              <IoMdMailOpen />
+
               <p>mostafizur0195@gmail.com</p>
             </div>
           </aside>

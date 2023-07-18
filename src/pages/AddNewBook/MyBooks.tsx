@@ -1,25 +1,14 @@
-import { useState } from "react";
-import {
-  useDeleteBookMutation,
-  useGetAllBooksQuery,
-} from "../../redux/feature/book/bookApi";
+import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
 import { useAppSelector } from "../../redux/hook";
 import { IBooks } from "../../types/globalTypes";
-import { useParams } from "react-router-dom";
 
 export default function MyBooks() {
-  //   const { id } = useParams();
-
-  //   const { item, setItem } = useState("");
-  //   const id = item._id;
   const { data } = useGetAllBooksQuery(undefined);
   const { user } = useAppSelector((state) => state.user);
-  //   const { deleteBook } = useDeleteBookMutation({ id });
-  const handleBook = (item: IBooks) => {
-    console.log("id", item);
-    // setItem(item);
-    // deleteBook(item._id);
-  };
+
+  // const handleBook = (item: IBooks) => {
+  //   // console.log("id", item);
+  // };
   return (
     <div>
       <div className="text-center">
@@ -58,9 +47,7 @@ export default function MyBooks() {
                     <td>
                       <div>
                         <div className="font-bold text-3xl">{item.title}</div>
-                        <div className="text-sm opacity-50 text-xl">
-                          {item.author}
-                        </div>
+                        <div className="opacity-50 text-xl">{item.author}</div>
                       </div>
                     </td>
                     <td>
@@ -95,9 +82,7 @@ export default function MyBooks() {
                     <td>
                       <div>
                         <div className="font-bold text-3xl">{item.title}</div>
-                        <div className="text-sm opacity-50 text-xl">
-                          {item.author}
-                        </div>
+                        <div className="opacity-50 text-xl">{item.author}</div>
                       </div>
                     </td>
                     <td>
@@ -106,7 +91,7 @@ export default function MyBooks() {
                     </td>
                     <th>
                       <button
-                        onClick={() => handleBook(item)}
+                        // onClick={() => handleBook(item)}
                         className="btn bg-red-400 text-white text-xl hover:bg-red-700 "
                       >
                         Delete

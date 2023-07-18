@@ -1,4 +1,5 @@
 export interface IBooks {
+  email: string | null;
   _id: string;
   title: string;
   image_link: string;
