@@ -72,6 +72,31 @@ const booksApi = api.injectEndpoints({
       }),
       invalidatesTags: ["deleteBook"],
     }),
+    // postComment: builder.mutation({
+    //   query: ({ id, data }) => ({
+    //     url: `/books/addComment/${id}`,
+    //     method: "POST",
+    //     providesTags: ["postComment"],
+    //     body: data,
+    //   }),
+    // }),
+    // postComment: builder.mutation({
+    //   query: ({ id, data }) => ({
+    //     url: `/books/addComment/${id}`,
+    //     method: "POST",
+    //     body: data,
+    //   }),
+    //   invalidatesTags: ["postComment"],
+    // }),
+    postComment: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/books/add-comment/${id}`,
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["postComment"],
+    }),
+
     // ---------------------------------------------
     // getAllBooks: builder.query({
     //   query: ({ search, genre, publication }) => ({
@@ -94,6 +119,7 @@ const booksApi = api.injectEndpoints({
 });
 
 export const {
+  usePostCommentMutation,
   useGetFilterBooksQuery,
   useCreateBookMutation,
   useDeleteBookMutation,

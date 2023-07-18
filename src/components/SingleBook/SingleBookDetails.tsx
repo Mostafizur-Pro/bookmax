@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   useDeleteBookMutation,
   useGetSingleBooksQuery,
+  usePostCommentMutation,
 } from "../../redux/feature/book/bookApi";
 import { useAppSelector } from "../../redux/hook";
 
@@ -11,15 +12,37 @@ export default function SingleBookDetails() {
 
   const [deleteBook] = useDeleteBookMutation();
   const { user } = useAppSelector((state) => state.user);
+  const [postComment] = usePostCommentMutation();
   // const { _id } = data.data;
   // const { title, image_link, genre, publication, author, email } = data?.data?.;
   // console.log("single", data?.data?._id);
-  console.log("deleteBook", deleteBook, id);
+  // console.log("deleteBook", deleteBook, id);
 
   const handleDeleteBook = () => {
     const process = confirm("do you want to delete this book");
 
     if (process && id) deleteBook(id);
+  };
+
+  const handleAddreview = (event: {
+    target: any;
+    preventDefault: () => void;
+  }) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = user?.email;
+    const review = form.review.value;
+    const reviewData = {
+      email,
+      review,
+    };
+
+    const option = {
+      id: data?.data?._id,
+      comment: reviewData,
+    };
+    console.log(option);
+    postComment(option);
   };
 
   return (
@@ -63,6 +86,34 @@ export default function SingleBookDetails() {
                 </button>
               </div>
             </>
+          )}
+        </div>
+        <hr className="mt-10" />
+        <div>
+          {user.email ? (
+            <div className="mt-10 mx-2 ">
+              <p className="text-3xl font font-bold mt-5">Add a Review</p>
+              <div className="flex justify-center mx-2">
+                <form onSubmit={handleAddreview}>
+                  <input
+                    name="review"
+                    className="input input-bordered w-80"
+                    type="text"
+                  />
+                  <button type="submit" className="btn btn-primary ml-5">
+                    Add Review
+                  </button>
+                </form>
+              </div>
+            </div>
+          ) : (
+            <p className="text-center font text-2xl font-bold  my-10">
+              Please{" "}
+              <Link to="/login">
+                <span className="hover:underline text-blue-500"> Login</span>
+              </Link>{" "}
+              to add a Review
+            </p>
           )}
         </div>
       </div>

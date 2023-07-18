@@ -5,13 +5,15 @@ import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import AllBooks from "../pages/AllBooks/AllBooks";
 import DashBoard from "../layouts/DashBoard";
-import AddNewBook from "../pages/AddNewBook/AddNewBook";
+import AddNewBook from "../pages/Dashboard/AddNewBook";
 import SingleBookDetails from "../components/SingleBook/SingleBookDetails";
 import BooksFilter from "../components/AllBooks/BooksFilter";
 import FilterDashboard from "../layouts/FilterDashboard";
-import MyBooks from "../pages/AddNewBook/MyBooks";
+import MyBooks from "../pages/Dashboard/MyBooks";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Wishlist from "../pages/Dashboard/Wishlist";
+import FutureRead from "../pages/Dashboard/FutureRead";
 
 const routes = createBrowserRouter([
   {
@@ -67,7 +69,27 @@ const routes = createBrowserRouter([
       },
       {
         path: "/dashboard/my-books",
-        element: <MyBooks />,
+        element: (
+          <PrivateRoute>
+            <MyBooks />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard/wishlist",
+        element: (
+          <PrivateRoute>
+            <Wishlist />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard/future-read",
+        element: (
+          <PrivateRoute>
+            <FutureRead />
+          </PrivateRoute>
+        ),
       },
     ],
   },

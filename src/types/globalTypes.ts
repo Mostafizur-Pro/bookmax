@@ -1,3 +1,8 @@
+export type IComment = {
+  email: string;
+  review: string;
+};
+
 export interface IBooks {
   email: string | null;
   _id: string;
@@ -6,4 +11,5 @@ export interface IBooks {
   genre: string;
   author: string;
   publication: string;
+  review: IComment[];
 }

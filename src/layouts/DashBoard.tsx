@@ -17,6 +17,12 @@ export default function DashBoard() {
               <li>
                 <Link to="/dashboard/my-books">My Books</Link>{" "}
               </li>
+              <li>
+                <Link to="/dashboard/wishlist">Wishlist</Link>{" "}
+              </li>
+              <li>
+                <Link to="/dashboard/future-read">Future Read</Link>{" "}
+              </li>
             </div>
           </div>
           <hr className="my-10" />
