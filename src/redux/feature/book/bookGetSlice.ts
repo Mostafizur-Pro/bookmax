@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 
 export const fetchBooks = createAsyncThunk("books/fetchAll", async () => {
   try {
-    const response = await axios.get("http://localhost:5000/api/v1/books");
+    const response = await axios.get(
+      "https://bookmax-server.vercel.app/api/v1/books"
+    );
     return response.data;
   } catch (error) {
     console.error("Error occurred during GET API request:", error);
