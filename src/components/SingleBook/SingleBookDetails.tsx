@@ -46,8 +46,8 @@ export default function SingleBookDetails() {
       review: reviewData,
     };
 
-    postComment(option);
     console.log("Post", option);
+    postComment(option);
   };
 
   return (

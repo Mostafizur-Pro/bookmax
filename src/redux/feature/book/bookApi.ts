@@ -74,7 +74,7 @@ const booksApi = api.injectEndpoints({
       invalidatesTags: ["deleteBook"],
     }),
     postComment: builder.mutation({
-      query: ({ id, data }: { id: string; data: IComment }) => ({
+      query: ({ id, data }) => ({
         url: `/books/add-comment/${id}`,
         method: "POST",
         body: data,

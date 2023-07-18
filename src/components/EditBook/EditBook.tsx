@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGetAllBooksQuery } from "../../redux/feature/book/bookApi";
-import { IBooks } from "../../types/globalTypes";
 
 interface IBookData {
   title: string;
