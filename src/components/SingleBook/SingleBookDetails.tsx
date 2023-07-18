@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   useDeleteBookMutation,
   useGetSingleBooksQuery,
@@ -7,21 +7,25 @@ import {
 import { useAppSelector } from "../../redux/hook";
 
 export default function SingleBookDetails() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { data } = useGetSingleBooksQuery({ id });
 
   const [deleteBook] = useDeleteBookMutation();
   const { user } = useAppSelector((state) => state.user);
   const [postComment] = usePostCommentMutation();
-  // const { _id } = data.data;
-  // const { title, image_link, genre, publication, author, email } = data?.data?.;
-  // console.log("single", data?.data?._id);
-  // console.log("deleteBook", deleteBook, id);
 
   const handleDeleteBook = () => {
     const process = confirm("do you want to delete this book");
 
     if (process && id) deleteBook(id);
+    navigate("/");
+  };
+  const handleEdit = (event: { target: any; preventDefault: () => void }) => {
+    event.preventDefault();
+    const form = event.target;
+    const title = form.title.value;
+    console.log("form", title);
   };
 
   const handleAddreview = (event: {
@@ -70,9 +74,117 @@ export default function SingleBookDetails() {
                 >
                   Delete Book
                 </button>
-                <button className="btn btn-outline btn-secondary">
-                  Edit Book
-                </button>
+                <Link to={`/edit-book/:${data?.data?._id}`}>
+                  <button className="btn btn-outline btn-secondary">
+                    Edit Book
+                  </button>
+                </Link>
+
+                <input
+                  type="checkbox"
+                  id="my_modal_6"
+                  className="modal-toggle"
+                />
+                <div className="modal">
+                  <div className="modal-box">
+                    <form onClick={handleEdit}>
+                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                        ✕
+                      </button>
+                      <div>
+                        <div className="text-center ">
+                          <h3 className="font-bold underline text-lg">
+                            {data?.data?.title}
+                          </h3>
+                          <img className="w-20" src={data?.data?.image_link} />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="title"
+                            className="block mb-2 mt-5 text-lg"
+                          >
+                            {data?.data?.title}
+                          </label>
+                          <input
+                            type="text"
+                            name="title"
+                            id="title"
+                            placeholder={`${data?.data?.title}`}
+                            className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-gray-200 text-gray-900"
+                            data-temp-mail-org="0"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="genre"
+                            className="block mb-2 mt-5 text-lg"
+                          >
+                            {data?.data?.genre}
+                          </label>
+                          <input
+                            type="text"
+                            name="genre"
+                            id="genre"
+                            placeholder={`${data?.data?.genre}`}
+                            className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-gray-200 text-gray-900"
+                            data-temp-mail-org="0"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="author"
+                            className="block mb-2 mt-5 text-lg"
+                          >
+                            {data?.data?.author}
+                          </label>
+                          <input
+                            type="text"
+                            name="author"
+                            id="author"
+                            placeholder={`${data?.data?.author}`}
+                            className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-gray-200 text-gray-900"
+                            data-temp-mail-org="0"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="year"
+                            className="block mb-2 mt-5 text-lg"
+                          >
+                            Year: {data?.data?.publication}
+                          </label>
+                          <input
+                            type="text"
+                            name="year"
+                            id="year"
+                            placeholder={`${data?.data?.publication}`}
+                            className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-gray-200 text-gray-900"
+                            data-temp-mail-org="0"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="year"
+                            className="block mb-2 mt-5 text-lg"
+                          >
+                            Select Image
+                          </label>
+                          <input
+                            type="file"
+                            name="image"
+                            id="image"
+                            className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-gray-200 text-gray-900"
+                            data-temp-mail-org="0"
+                          />
+                        </div>
+                      </div>
+                      <button className="w-full mt-10 px-8 py-3 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover:text-white text-gray-100">
+                        {/* {loading ? <BtnSpinner /> : "Sign In"} */}
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </>
           ) : (

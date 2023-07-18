@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Wishlist from "../pages/Dashboard/Wishlist";
 import FutureRead from "../pages/Dashboard/FutureRead";
+import EditBook from "../components/EditBook/EditBook";
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const routes = createBrowserRouter([
       {
         path: "/allbooks",
         element: <AllBooks />,
+      },
+      {
+        path: "/edit-book/:id",
+        element: <EditBook />,
       },
       {
         path: "/login",
