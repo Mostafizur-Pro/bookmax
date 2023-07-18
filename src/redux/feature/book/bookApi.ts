@@ -1,3 +1,4 @@
+import { IComment } from "../../../types/globalTypes";
 import { api } from "../../api/apiSlice";
 
 const booksApi = api.injectEndpoints({
@@ -72,14 +73,14 @@ const booksApi = api.injectEndpoints({
       }),
       invalidatesTags: ["deleteBook"],
     }),
-    // postComment: builder.mutation({
-    //   query: ({ id, data }) => ({
-    //     url: `/books/addComment/${id}`,
-    //     method: "POST",
-    //     providesTags: ["postComment"],
-    //     body: data,
-    //   }),
-    // }),
+    postComment: builder.mutation({
+      query: ({ id, data }: { id: string; data: IComment }) => ({
+        url: `/books/add-comment/${id}`,
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["postComment"],
+    }),
     // postComment: builder.mutation({
     //   query: ({ id, data }) => ({
     //     url: `/books/addComment/${id}`,
@@ -88,14 +89,14 @@ const booksApi = api.injectEndpoints({
     //   }),
     //   invalidatesTags: ["postComment"],
     // }),
-    postComment: builder.mutation({
-      query: ({ id, data }) => ({
-        url: `/books/add-comment/${id}`,
-        method: "POST",
-        body: data,
-      }),
-      invalidatesTags: ["postComment"],
-    }),
+    // postComment: builder.mutation({
+    //   query: ({ id, data }) => ({
+    //     url: `/books/add-comment/${id}`,
+    //     method: "POST",
+    //     body: data,
+    //   }),
+    //   invalidatesTags: ["postComment"],
+    // }),
 
     // ---------------------------------------------
     // getAllBooks: builder.query({

@@ -11,5 +11,5 @@ export interface IBooks {
   genre: string;
   author: string;
   publication: string;
-  review: IComment[];
+  review?: IComment[];
 }

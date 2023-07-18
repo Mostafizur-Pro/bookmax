@@ -12,7 +12,7 @@ export default function SingleBookDetails() {
   const { data } = useGetSingleBooksQuery({ id });
 
   const [deleteBook] = useDeleteBookMutation();
-  const { user } = useAppSelector((state) => state.user);
+  const { user } = useAppSelector((state: { user: any }) => state.user);
   const [postComment] = usePostCommentMutation();
 
   const handleDeleteBook = () => {
@@ -43,10 +43,11 @@ export default function SingleBookDetails() {
 
     const option = {
       id: data?.data?._id,
-      comment: reviewData,
+      review: reviewData,
     };
-    console.log(option);
+
     postComment(option);
+    console.log("Post", option);
   };
 
   return (
